@@ -8,7 +8,11 @@
     "build": "next build",
     "preexport": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "s3:clean": "aws s3 rm s3://wyattandjessica --recursive --profile apsis",
+    "s3:upload": "aws s3 sync out/ s3://wyattandjessica --acl public-read --profile apsis",
+    "predeploy": "npm run export",
+    "deploy": "npm run s3:clean && npm run s3:upload"
   },
   "author": "",
   "license": "ISC",
