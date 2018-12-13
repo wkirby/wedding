@@ -11,8 +11,10 @@
     "start": "next start",
     "s3:clean": "aws s3 rm s3://wyattandjessica --recursive --profile apsis",
     "s3:upload": "aws s3 sync out/ s3://wyattandjessica --acl public-read --profile apsis",
+    "cf:invalidate": "aws cloudfront create-invalidation --distribution-id E37UXYWN6RJZWD --paths \"/*\" --profile apsis",
     "predeploy": "npm run export",
-    "deploy": "npm run s3:clean && npm run s3:upload"
+    "deploy": "npm run s3:clean && npm run s3:upload",
+    "postdeploy": "npm run cf:invalidate"
   },
   "author": "",
   "license": "ISC",
