@@ -17,18 +17,18 @@
     "postdeploy": "npm run cf:invalidate"
   },
   "author": "",
-  "license": "ISC",
+  "license": "",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bloomer": "^0.6.5",
     "bulma": "^0.7.4",
     "js-yaml-loader": "^1.0.1",
     "lodash": "^4.17.11",
-    "next": "^7.0.2",
+    "next": "^8.1.0",
+    "next-page-transitions": "^1.0.0-beta.2",
     "node-sass": "^4.11.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-flexview": "^4.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-skeleton-css": "^1.1.0"
   },
   "devDependencies": {}
