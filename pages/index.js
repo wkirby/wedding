@@ -1,12 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
+import { Portal } from "react-portal";
 import { Layout } from "../components/Layout";
-const MAP_URL =
-  "https://www.google.com/maps/place/Frontier/@43.919757,-69.9691237,17z/data=!3m1!4b1!4m5!3m4!1s0x4cad87705c7a502d:0x46d203cdf7b1ad6a!8m2!3d43.919757!4d-69.966935";
+import StackGrid from "react-stack-grid";
+import {
+  Container,
+  Modal,
+  ModalBackground,
+  ModalContent,
+  ModalClose
+} from "bloomer";
+
+const StackImage = ({ src }) => {
+  const [active, setActive] = useState(false);
+
+  return (
+    <div className="stack-image">
+      <img src={src} onClick={() => setActive(!active)} />
+      <Portal>
+        <Modal isActive={active}>
+          <ModalBackground onClick={() => setActive(!active)} />
+          <ModalContent hasTextAlign="centered">
+            <img src={src} />
+          </ModalContent>
+          <ModalClose onClick={() => setActive(!active)} />
+        </Modal>
+      </Portal>
+    </div>
+  );
+};
 
 export default () => {
   return (
     <Layout>
-      Hello
+      <Container>
+        <StackGrid monitorImagesLoaded columnWidth={150}>
+          <StackImage src="https://picsum.photos/200/300/?random" />
+          <StackImage src="https://picsum.photos/400/600/?random" />
+          <StackImage src="https://picsum.photos/200/400/?random" />
+          <StackImage src="https://picsum.photos/200/200/?random" />
+
+          <StackImage src="https://picsum.photos/200/300/?random" />
+          <StackImage src="https://picsum.photos/400/600/?random" />
+          <StackImage src="https://picsum.photos/200/400/?random" />
+          <StackImage src="https://picsum.photos/200/200/?random" />
+
+          <StackImage src="https://picsum.photos/800/300/?random" />
+          <StackImage src="https://picsum.photos/600/600/?random" />
+          <StackImage src="https://picsum.photos/300/400/?random" />
+          <StackImage src="https://picsum.photos/250/200/?random" />
+
+          <StackImage src="https://picsum.photos/200/300/?random" />
+          <StackImage src="https://picsum.photos/430/600/?random" />
+          <StackImage src="https://picsum.photos/220/400/?random" />
+          <StackImage src="https://picsum.photos/210/200/?random" />
+
+          <StackImage src="https://picsum.photos/200/300/?random" />
+          <StackImage src="https://picsum.photos/430/400/?random" />
+          <StackImage src="https://picsum.photos/200/400/?random" />
+          <StackImage src="https://picsum.photos/200/200/?random" />
+
+          <StackImage src="https://picsum.photos/200/300/?random" />
+          <StackImage src="https://picsum.photos/400/600/?random" />
+          <StackImage src="https://picsum.photos/200/400/?random" />
+          <StackImage src="https://picsum.photos/200/200/?random" />
+        </StackGrid>
+      </Container>
     </Layout>
   );
 };
