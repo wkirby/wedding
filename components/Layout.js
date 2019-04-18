@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { Section, Container, Content } from "bloomer";
+import { Section, Container, Content, Footer, Columns } from "bloomer";
 
 import "../assets/styles/main.scss";
 import { Nav } from "./Nav";
@@ -24,5 +24,11 @@ export const Layout = ({ children, ...props }) => (
         <Content>{children}</Content>
       </Container>
     </Section>
+
+    <Footer id="footer">
+      <Container>
+        <Content isSize="small">Hello :)</Content>
+      </Container>
+    </Footer>
   </main>
 );

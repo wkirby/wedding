@@ -1,29 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Nunito+Sans");
 
+// Fonts
 $serif: "Libre Baskerville", "Baskerville", serif;
 $sans: "Avenir", "Nunito Sans", sans-serif;
 
+// Colors
 $paper: #f8f7f5;
 $green: #5a7955;
 $red: #e23b50;
 $text: #555558;
 
-// // Update Bulma's global variables
-// $family-sans-serif: $sans;
-// $grey-dark: $brown;
-// $grey-light: $beige-light;
-// $primary: $purple;
-// $link: $pink;
-// $widescreen-enabled: false;
-// $fullhd-enabled: false;
-
-// // Update some of Bulma's component variables
-// $body-background-color: $beige-lighter;
-// $control-border-width: 2px;
-// $input-border-color: transparent;
-// $input-shadow: none;
+// Update Bulma's global variables
+$family-secondary: $serif;
+$primary: $green;
+$link: $green;
+$footer-background-color: $paper;
 
 @import '~bulma/bulma';
-
-@import './components/nav', './components/hero.scss';
+@import './components/type', './components/layout', './components/nav', './components/hero';
 

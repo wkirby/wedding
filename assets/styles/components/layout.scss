@@ -1,0 +1,9 @@
+.container {
+    &.is-narrow {
+        max-width: $tablet;
+    }
+}
+
+#footer {
+    margin-top: $gap;
+}

@@ -23,19 +23,23 @@ export default () => {
         </HeroBody>
       </Hero>
 
-      <Content>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugit
-          eum perferendis iure debitis officiis excepturi quam minus fuga
-          facere, maiores explicabo. Veniam ab hic excepturi delectus,
-          asperiores voluptates laborum?
-        </p>
-      </Content>
+      <Container className="is-narrow">
+        <Content>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, fugit
+            eum perferendis iure debitis officiis excepturi quam minus fuga
+            facere, maiores explicabo. Veniam ab hic excepturi delectus,
+            asperiores voluptates laborum?
+          </p>
+        </Content>
+      </Container>
+
+      <hr/>
 
       <Columns isCentered>
         <Column>
           <Title>Gilsland Farm</Title>
-          <Subtitle>The Ceremony</Subtitle>
+          <Subtitle isSize="5">The Ceremony</Subtitle>
           <p>
             Situated along the Presumpscot River estuary just five minutes from
             Portland, Maine Audubon’s headquarters features a modern
@@ -44,13 +48,14 @@ export default () => {
             meadow, orchard, and salt marsh.
           </p>
           <address>
-            20 Gilsland Farm Road<br/>
+            20 Gilsland Farm Road
+            <br />
             Falmouth, Maine 04105
           </address>
         </Column>
         <Column>
           <Title>The Frontier</Title>
-          <Subtitle>The Reception</Subtitle>
+          <Subtitle isSize="5">The Reception</Subtitle>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Repudiandae, minima rerum corporis doloribus fugiat explicabo
@@ -58,8 +63,10 @@ export default () => {
             in, rerum eius placeat repudiandae repellat.
           </p>
           <address>
-            14 Maine St.<br/>
-            Mill 3 Fort Andross<br/>
+            14 Maine St.
+            <br />
+            Mill 3 Fort Andross
+            <br />
             Brunswick, ME 04011
           </address>
         </Column>
