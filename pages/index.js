@@ -15,7 +15,7 @@ const StackImage = ({ src }) => {
 
   return (
     <div className="stack-image">
-      <img src={src} onClick={() => setActive(!active)} />
+      <img src={src} style={{width: '100%'}} onClick={() => setActive(!active)} />
       <Portal>
         <Modal isActive={active}>
           <ModalBackground onClick={() => setActive(!active)} />
@@ -37,7 +37,7 @@ export default () => {
       <Container>
         <StackGrid
           monitorImagesLoaded
-          columnWidth={200}
+          columnWidth={"20%"}
           duration={600}
           gutterWidth={10}
           gutterHeight={10}
