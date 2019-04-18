@@ -21,7 +21,7 @@ export const Layout = ({ children, ...props }) => (
     <Section>
       <Container>
         <Nav />
-        <Content>{children}</Content>
+        {children}
       </Container>
     </Section>
 
