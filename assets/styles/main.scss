@@ -1,142 +1,29 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Nunito+Sans|Permanent+Marker");
-
-@import "normalize";
-@import "skeleton";
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Nunito+Sans");
 
 $serif: "Libre Baskerville", "Baskerville", serif;
 $sans: "Avenir", "Nunito Sans", sans-serif;
-$marker: "Permanent Marker", monospace;
 
 $paper: #f8f7f5;
 $green: #5a7955;
 $red: #e23b50;
 $text: #555558;
 
-$phone: 420px;
-$tablet: 768px;
-$desktop: 1024px;
+// // Update Bulma's global variables
+// $family-sans-serif: $sans;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+// $primary: $purple;
+// $link: $pink;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+// // Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
 
-body,
-html,
-#__next {
-  height: 100%;
-  color: $text;
-  font-family: $serif;
-  line-height: 1.415;
-  background-color: $paper;
-}
+@import '~bulma/bulma';
 
-#main {
-  height: 100%;
-  padding: 1em;
+@import './components/nav', './components/hero.scss';
 
-  background: url("/static/img/bg/top_left.png"),
-    url("/static/img/bg/top_right.png"), url("/static/img/bg/bottom_left.png"),
-    url("/static/img/bg/bottom_right.png");
-
-  background-size: 80px;
-  background-position: left top, right top, left bottom, right bottom;
-  background-repeat: no-repeat;
-
-  @media screen and (min-width: $tablet) {
-    background-size: 180px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    background-size: 240px;
-  }
-}
-
-h1,
-h2 {
-  letter-spacing: 1px;
-}
-
-hr {
-  border-style: dotted;
-  max-width: 60%;
-}
-
-.block {
-  margin-bottom: 20px;
-
-  @media screen and (min-width: $tablet) {
-    margin-bottom: 40px;
-  }
-}
-
-.small {
-  font-size: 1em;
-}
-
-.logo {
-  width: 80px;
-  height: auto;
-  margin-bottom: 20px;
-
-  @media screen and (min-width: $tablet) {
-    width: 120px;
-    margin-bottom: 40px;
-  }
-}
-
-.jumbo {
-  font-family: $serif;
-  font-weight: 900;
-  color: $green;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 64px;
-  }
-}
-
-.subjumbo {
-  font-size: 20px;
-  font-family: $serif;
-  margin-bottom: 60px;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 28px;
-  }
-}
-
-.handwriting {
-  position: relative;
-  font-family: $marker;
-  color: $red;
-
-  &::after {
-    font-size: 0.9em;
-    content: "^\A" attr(title);
-    position: absolute;
-    text-align: center;
-    margin-top: 1em;
-    line-height: 0.5;
-    transform: rotate(-15deg) translateX(-60%);
-  }
-}
-
-.info_block {
-  font-size: 18px;
-
-  @media screen and (min-width: $tablet) {
-    font-size: 24px;
-  }
-
-  &__label {
-    font-family: $sans;
-    font-size: inherit;
-    margin-bottom: 0.25em;
-  }
-
-  &__content {
-    font-size: inherit;
-    font-family: $serif;
-  }
-}
