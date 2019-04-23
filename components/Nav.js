@@ -1,6 +1,7 @@
 import { LevelItem } from "bloomer";
 import Link from "next/link";
 import React from "react";
+import ReactTooltip from 'react-tooltip'
 import ActiveLink from "./ActiveLink";
 import { Level } from "bloomer/lib/components/Level/Level";
 
@@ -33,9 +34,11 @@ export const Nav = props => {
 
         <LevelItem>
           <ActiveLink href="/">
-            <a>
+            <a data-tip="Home">
               <Logo />
+              <ReactTooltip delayShow={350} place="bottom" type="dark" effect="solid" />
             </a>
+
           </ActiveLink>
         </LevelItem>
 

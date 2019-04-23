@@ -31,7 +31,8 @@
     "react-dom": "^16.8.6",
     "react-portal": "^4.2.0",
     "react-skeleton-css": "^1.1.0",
-    "react-stack-grid": "^0.7.1"
+    "react-stack-grid": "^0.7.1",
+    "react-tooltip": "^3.10.0"
   },
   "devDependencies": {}
 }

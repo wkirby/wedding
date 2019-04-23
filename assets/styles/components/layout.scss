@@ -1,6 +1,6 @@
 .container {
   &.is-narrow {
-    max-width: $tablet;
+    max-width: $narrow;
   }
 }
 
@@ -24,4 +24,11 @@
 .page-transition-exit-active {
   opacity: 0;
   transition: opacity $page-transition-duration ease-in-out;
+}
+
+.media {
+  &.is-centered {
+    justify-content: center;
+    align-items: center;
+  }
 }
