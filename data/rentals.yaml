@@ -1,0 +1,4 @@
+- label: Airbnb
+  website: https://www.airbnb.com/s/Brunswick--ME--United-States/homes?refinement_paths%5B%5D=%2Fhomes&query=Brunswick%2C%20ME%2C%20United%20States&checkin=2019-07-31&checkout=2019-08-04&adults=2&children=0&infants=0&guests=2&toddlers=0&click_referer=t%3ASEE_ALL%7Csid%3A0e9ca596-fbb9-456e-8e08-92b305ab1163%7Cst%3AMAGAZINE_HOMES&search_type=UNKNOWN&allow_override%5B%5D=&map_toggle=false&zoom=10&search_by_map=true&sw_lat=43.3714630785307&sw_lng=-70.45652863008922&ne_lat=44.25439460200368&ne_lng=-69.76988312227672&s_tag=Zqc7W0Wt
+- label: VRBO
+  website: https://www.vrbo.com/search/keywords:brunswick-me-usa/arrival:2019-07-30/departure:2019-08-04?adultsCount=2&petIncluded=false

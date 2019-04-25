@@ -15,6 +15,12 @@ export const Layout = ({ children, ...props }) => (
       />
       <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css"
+        integrity="sha256-hmDtEnmZFvJ3zLsfobp03CSD3/qRCJmY3f7Vqf6zIgA="
+        crossorigin="anonymous"
+      />
       <title>Wyatt &amp; Jessica</title>
     </Head>
 

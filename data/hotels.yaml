@@ -1,6 +1,25 @@
-- label: Hotels & Inns
-  items:
-    - label: Best Western
-      address: 123 Brunswick Way
-    - label: Traveler's Inn
-      address: 123 Brunswick Drive
+- label: Fairfield Inn
+  address: 36 Old Portland Rd, Brunswick, ME 04011
+  phone: (207) 721-0300.
+  details: Block Rooms Available @ $199/night until June 6
+- label: Comfort Inn
+  address: 199 Pleasant St, Brunswick, ME 04011
+  phone: (207) 729-1129
+- label: Traveller's Inn
+  address: 130 Pleasant Street U.S. Route 1, Brunswick, ME 04011
+  phone: (207) 729-3364
+- label: Holiday Inn
+  address: 88 Spring St, Portland, ME 04101
+  phone: (207) 775-2311
+- label: The Westin Harborview
+  address: 157 High St, Portland, ME 04101
+  phone: (207) 775-5411
+- label: The Daniel
+  address: 10 Water St, Brunswick, ME 04011
+  phone: (207) 373-1824
+- label: The Brunswick Hotel and Tavern
+  address: 4 Noble St, Brunswick, ME 04011
+  phone: (207) 837-6565
+- label: The Black Lantern Bed and Breakfast
+  address: 57 Elm St, Topsham, ME 04086
+  phone: (207) 725-4165

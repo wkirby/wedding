@@ -1,36 +1,19 @@
-import {
-  Column,
-  Columns,
-  Container,
-  Content,
-  Hero,
-  HeroBody,
-  Subtitle,
-  Title
-} from "bloomer";
+import { Column, Columns, Content, Subtitle, Title } from "bloomer";
 import React from "react";
 import { Layout } from "../components/Layout";
-import { HeroHeader } from "../components/HeroHeader";
+import { PageHero } from "../components/PageHero";
 
 export default () => {
   return (
     <Layout>
-      <Hero
-        isColor="dark"
-        isSize="large"
-        className="has-bg-img has-border has-vignette is-home"
-        style={{ backgroundImage: `url(static/img/frontier.jpg)` }}
-      >
-        <HeroBody>
-          <HeroHeader>
-            <Title isSize="1">The Venues</Title>
-          </HeroHeader>
-        </HeroBody>
-      </Hero>
+      <PageHero background="url(static/img/frontier.jpg)">
+        <Title isSize="1">The Venues</Title>
+      </PageHero>
+
       <Columns isCentered>
         <Column>
           <Title>Gilsland Farm</Title>
-          <Subtitle isSize="5">The Ceremony</Subtitle>
+          <Subtitle isSize="5">Ceremony</Subtitle>
           <Content>
             <p>
               Just 10 minutes away from Portland, ME, Gilsland Farm is a
@@ -52,7 +35,7 @@ export default () => {
         </Column>
         <Column>
           <Title>The Frontier</Title>
-          <Subtitle isSize="5">The Reception</Subtitle>
+          <Subtitle isSize="5">Reception</Subtitle>
           <Content>
             <p>
               After the ceremony, we invite you to join us just 30 minutes north
