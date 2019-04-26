@@ -1,11 +1,12 @@
+#main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .container {
   &.is-narrow {
     max-width: $narrow;
   }
-}
-
-#footer {
-  margin-top: $gap;
 }
 
 .page-transition-enter {

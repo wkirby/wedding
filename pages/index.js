@@ -1,13 +1,21 @@
-import { Container, Content, Hero, HeroBody, Subtitle, Title } from "bloomer";
+import {
+  Container,
+  Content,
+  Hero,
+  HeroBody,
+  Subtitle,
+  Title,
+  Section
+} from "bloomer";
 import React from "react";
-import StackGrid, { easings, transitions } from "react-stack-grid";
+import { transitions } from "react-stack-grid";
 import { Layout } from "../components/Layout";
-import { StackImage } from "../components/StackImage";
 import { TimelineEntry } from "../components/TimelineEntry";
 import timeline from "../data/timeline.yaml";
 import { HeroHeader } from "../components/HeroHeader";
+import { PhotoWall } from "../components/PhotoWall";
 
-const transition = transitions.scaleDown;
+export const transition = transitions.scaleDown;
 
 export default () => {
   const timelineEntries = timeline.map((t, i) => (
@@ -18,7 +26,7 @@ export default () => {
 
   return (
     <Layout>
-      <Container>
+      <Section>
         <Hero
           isColor="dark"
           isSize="large"
@@ -30,11 +38,13 @@ export default () => {
               <Title>
                 Wyatt <small>&amp;</small> Jessica
               </Title>
-              <Subtitle>are getting married</Subtitle>
+              <Subtitle>august 3, 2019</Subtitle>
             </HeroHeader>
           </HeroBody>
         </Hero>
+      </Section>
 
+      <Section>
         <Content hasTextAlign="centered">
           <div className="container is-narrow">
             <Title>10 Years Together</Title>
@@ -47,11 +57,13 @@ export default () => {
             </p>
           </div>
         </Content>
-
+      </Section>
+      <Section>
         <div className="container is-narrow">{timelineEntries}</div>
+      </Section>
 
-        <hr />
-
+      <hr />
+      <Section>
         <Content hasTextAlign="centered">
           <Title>Our Favorite Memories</Title>
 
@@ -60,41 +72,8 @@ export default () => {
           </small>
         </Content>
 
-        <StackGrid
-          monitorImagesLoaded
-          columnWidth={"20%"}
-          duration={600}
-          gutterWidth={10}
-          gutterHeight={10}
-          easing={easings.cubicOut}
-          appearDelay={60}
-          appear={transition.appear}
-          appeared={transition.appeared}
-          enter={transition.enter}
-          entered={transition.entered}
-          leaved={transition.leaved}
-        >
-          <StackImage src="https://picsum.photos/200/300/?random" />
-          <StackImage src="https://picsum.photos/400/600/?random" />
-          <StackImage src="https://picsum.photos/200/400/?random" />
-          <StackImage src="https://picsum.photos/200/200/?random" />
-
-          <StackImage src="https://picsum.photos/200/300/?random" />
-          <StackImage src="https://picsum.photos/400/600/?random" />
-          <StackImage src="https://picsum.photos/200/400/?random" />
-          <StackImage src="https://picsum.photos/200/200/?random" />
-
-          <StackImage src="https://picsum.photos/800/300/?random" />
-          <StackImage src="https://picsum.photos/600/600/?random" />
-          <StackImage src="https://picsum.photos/300/400/?random" />
-          <StackImage src="https://picsum.photos/250/200/?random" />
-
-          <StackImage src="https://picsum.photos/200/300/?random" />
-          <StackImage src="https://picsum.photos/430/600/?random" />
-          <StackImage src="https://picsum.photos/220/400/?random" />
-          <StackImage src="https://picsum.photos/210/200/?random" />
-        </StackGrid>
-      </Container>
+        <PhotoWall />
+      </Section>
     </Layout>
   );
 };

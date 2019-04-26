@@ -24,12 +24,8 @@ export const Layout = ({ children, ...props }) => (
       <title>Wyatt &amp; Jessica</title>
     </Head>
 
-    <Section>
-      <Container>
-        <Nav />
-        {children}
-      </Container>
-    </Section>
+    <Nav />
+    {children}
 
     <Footer id="footer">
       <Container>
