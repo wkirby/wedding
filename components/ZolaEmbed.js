@@ -18,11 +18,14 @@ export class ZolaEmbed extends React.Component {
   render() {
     const { slug, ...props } = this.props;
     return (
+      <div className="embed-responsive embed-responsive-16by9">
       <iframe
+      className="embed-responsive-item"
         style={{ minWidth: "100%", width: 1 }}
         ref={this.iframe}
         src={`https://widget.zola.com/v1/widget/registry/${slug}/html`}
       />
+      </div>
     );
   }
 }

@@ -1,7 +1,13 @@
 .navbar {
-    &.bg-transparent {
-        background: transparent;
+  &.wj {
+    .nav-link {
+      text-transform: uppercase;
     }
+  }
+  &.bg-transparent {
+    background: transparent;
+  }
+
   &.centered {
     @include media-breakpoint-up(md) {
       .navbar-nav {

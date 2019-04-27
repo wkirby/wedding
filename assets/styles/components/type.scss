@@ -3,26 +3,16 @@ hr {
   margin-left: auto;
   margin-right: auto;
 }
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: $family-secondary;
+  font-family: $font-family-serif;
 
   small {
     font-size: 0.75em;
     font-style: italic;
-  }
-}
-
-.subtitle {
-  text-transform: lowercase;
-}
-
-ul,
-ol {
-  &.is-unstyled {
-    list-style: none;
   }
 }

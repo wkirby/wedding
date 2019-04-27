@@ -37,7 +37,7 @@ export class Nav extends React.Component {
 
   render() {
     return (
-      <Navbar color="transparent" light expand="md" className="centered mb-3">
+      <Navbar color="transparent" light expand="md" className="centered wj">
         <NavbarBrand href="/" className="mr-auto d-inline-block d-md-none">
           <Logo />
         </NavbarBrand>
