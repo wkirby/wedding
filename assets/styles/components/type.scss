@@ -1,7 +1,10 @@
 hr {
   width: 40%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: $spacer-3 auto;
+
+  @include media-breakpoint-up(md) {
+    margin: $spacer-5 auto;
+  }
 }
 
 h1,
@@ -15,4 +18,8 @@ h5 {
     font-size: 0.75em;
     font-style: italic;
   }
+}
+
+address {
+  font-style: italic;
 }

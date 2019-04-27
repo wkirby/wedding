@@ -1,68 +1,57 @@
-import {
-  Column,
-  Columns,
-  Content,
-  Menu,
-  MenuLabel,
-  MenuLink,
-  MenuList,
-  Title
-} from "bloomer";
+import { Title } from "bloomer";
 import React from "react";
+import { Nav, NavItem, NavLink, Row, Col, Container } from "reactstrap";
 import { Layout } from "../components/Layout";
-
-import rentalData from "../data/rentals.yaml";
-import hotelData from "../data/hotels.yaml";
-import travelData from "../data/travel.yaml";
 import { LocationBlock } from "../components/LocationBlock";
-import { PageHero } from "../components/PageHero";
+import hotelData from "../data/hotels.yaml";
+import rentalData from "../data/rentals.yaml";
+import travelData from "../data/travel.yaml";
 
 const StaySidebarMenu = props => (
-  <Menu>
-    <MenuLabel>Getting to Maine</MenuLabel>
-    <MenuList>
+  <aside>
+    <Nav vertical>
+      <NavItem>Getting to Maine</NavItem>
       {travelData.map((t, i) => {
         return (
-          <li key={i}>
-            <MenuLink href={`#travel-${i}`}>{t.label}</MenuLink>
-          </li>
+          <NavItem key={i}>
+            <NavLink href={`#travel-${i}`}>{t.label}</NavLink>
+          </NavItem>
         );
       })}
-    </MenuList>
-    <MenuLabel>Vacation Rentals</MenuLabel>
-    <MenuList>
-      <li>
-        <MenuLink href={`#airbnb`}>Airbnb</MenuLink>
-      </li>
-      <li>
-        <MenuLink href={`#vrbo`}>VRBO</MenuLink>
-      </li>
-    </MenuList>
-    <MenuLabel>Hotels</MenuLabel>
-    <MenuList>
+
+      <NavItem>Vacation Rentals</NavItem>
+      <NavItem>
+        <NavLink href={`#airbnb`}>Airbnb</NavLink>
+      </NavItem>
+      <NavItem>
+        <NavLink href={`#vrbo`}>VRBO</NavLink>
+      </NavItem>
+
+      <NavItem>Hotels</NavItem>
       {hotelData.map((t, i) => {
         return (
-          <li key={i}>
-            <MenuLink href={`#hotel-${i}`}>{t.label}</MenuLink>
-          </li>
+          <NavItem key={i}>
+            <NavLink href={`#hotel-${i}`}>{t.label}</NavLink>
+          </NavItem>
         );
       })}
-    </MenuList>
-  </Menu>
+    </Nav>
+  </aside>
 );
 
 export default () => {
   return (
     <Layout>
-      <PageHero background={"url(static/img/hero/stay_hero.jpg)"}>
+      {/* <PageHero background={"url(static/img/hero/stay_hero.jpg)"}>
         <Title>Where to Stay</Title>
-      </PageHero>
-      <Columns isCentered>
-        <Column isSize="1/3">
-          <StaySidebarMenu />
-        </Column>
-        <Column>
-          <Content>
+      </PageHero> */}
+      <Container>
+        <Row>
+          <Col sm={4}>
+            <StaySidebarMenu />
+          </Col>
+
+          <Col>
             <p>
               Maine’s midcoast region is a beautiful destination for a summer
               vacation. Because we have two venues, there are a wide range of
@@ -71,9 +60,10 @@ export default () => {
               Brunswick, ME along I-295 will suit you just fine, and we
               encourage you to explore the region while you’re here.
             </p>
-          </Content>
-          <Title isSize={4}>Getting to Maine</Title>
-          <Content>
+
+            <hr />
+
+            <h3>Getting to Maine</h3>
             <p>
               Maine is a small state, and there are a number of ways to get
               here. The main airport is PWM, located in Portland, ME --- but it
@@ -89,31 +79,31 @@ export default () => {
               multiple buses every day from Boston Logan to the Portland
               Transportation Center.
             </p>
-          </Content>
 
-          {travelData.map((t, i) => (
-            <LocationBlock {...t} key={i} />
-          ))}
+            {travelData.map((t, i) => (
+              <LocationBlock {...t} key={i} />
+            ))}
 
-          <Title isSize={4}>Vacation Rentals</Title>
-          <Content>
+            <hr />
+
+            <h3>Vacation Rentals</h3>
             <p>
               Our preferred accomodations when visiting Maine, you can find many
               beautiful homes to stay in on a number of vacation rental sites.
               Below are our recommendations for sites where you might find
               pleasant accomodations.
             </p>
-          </Content>
-          {rentalData.map((t, i) => (
-            <LocationBlock {...t} key={i} />
-          ))}
+            {rentalData.map((t, i) => (
+              <LocationBlock {...t} key={i} />
+            ))}
 
-          <Title isSize={4}>Hotels &amp; Inns</Title>
-          {hotelData.map((t, i) => (
-            <LocationBlock {...t} key={i} />
-          ))}
-        </Column>
-      </Columns>
+            <h3>Hotels &amp; Inns</h3>
+            {hotelData.map((t, i) => (
+              <LocationBlock {...t} key={i} />
+            ))}
+          </Col>
+        </Row>
+      </Container>
     </Layout>
   );
 };

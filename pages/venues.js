@@ -1,16 +1,16 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import { Layout } from "../components/Layout";
+import { Title, Subtitle } from "../components/Title";
 
 const Section = props => <section {...props} />;
-const Title = props => <h1 className="title" {...props} />;
-const Subtitle = props => <h2 className="subtitle" {...props} />;
+
 
 export default () => {
   return (
     <Layout>
       <Section className="text-center">
-        <Title hasTextAlign="centered" isSize="1">
+        <Title size="1">
           The Venues
         </Title>
       </Section>
@@ -26,7 +26,7 @@ export default () => {
 
             <Col md={6}>
               <Title>Gilsland Farm</Title>
-              <Subtitle isSize="5">Ceremony</Subtitle>
+              <Subtitle>Ceremony</Subtitle>
               <div>
                 <p>
                   Just 10 minutes away from Portland, ME, Gilsland Farm is a
@@ -63,7 +63,7 @@ export default () => {
 
             <Col md={6}>
               <Title>The Frontier</Title>
-              <Subtitle isSize="5">Reception</Subtitle>
+              <Subtitle>Reception</Subtitle>
               <div>
                 <p>
                   After the ceremony, we invite you to join us just 30 minutes

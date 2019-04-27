@@ -1,33 +1,33 @@
-import { Box, Content, Icon } from "bloomer";
 import React from "react";
+import { Card, CardBody, CardTitle } from "reactstrap";
+import { Icon } from "./Icon";
+
 export const LocationBlock = ({ children, ...props }) => {
+  const { label, details, address, phone, website } = props;
   return (
-    <Box>
-      <Content>
-        {props.label && <strong>{props.label}</strong>}
+    <Card className="mb-3" {...props}>
+      <CardBody>
+        {label && <CardTitle><strong>{label}</strong></CardTitle>}
 
-        {props.details && (
+        {details && (
           <p>
-            <em>{props.details}</em>
+            <em>{details}</em>
           </p>
         )}
 
-        {props.address && <address>{props.address}</address>}
-        {props.phone && (
-          <p>
-            <a href={`tel:${props.phone}`}>
-              <Icon className="typcn typcn-phone" /> {props.phone}
-            </a>
-          </p>
+        {address && <address>{address}</address>}
+
+        {phone && (
+          <a href={`tel:${phone}`}>
+            <Icon className="typcn typcn-phone" /> {phone}
+          </a>
         )}
-        {props.website && (
-          <p>
-            <a href={props.website} target="_blank">
-              <Icon className="typcn typcn-compass" /> Website
-            </a>
-          </p>
+        {website && (
+          <a href={website} target="_blank">
+            <Icon className="typcn typcn-compass" /> Website
+          </a>
         )}
-      </Content>
-    </Box>
+      </CardBody>
+    </Card>
   );
 };
