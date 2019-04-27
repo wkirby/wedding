@@ -11,6 +11,7 @@ $primary: #5a7955;
 $text-color: #555558;
 
 $grid-gutter-width: 40px;
+$narrow: 640px;
 
 // this variable should match the timeout setting in _app
 $page-transition-duration: 150ms;
@@ -33,13 +34,13 @@ $spacer-md: $spacer-3;
 $spacer-lg: $spacer-5;
 $spacer-xl: $spacer * 5;
 
+@import "./components/layout";
 @import "./components/nav";
 @import "./components/type";
 @import "./components/hero";
 @import "./components/footer";
 
-// @import "./components/type", "./components/layout", "./components/nav",
-//   "./components/hero", "./components/images";
+// @import "./components/images";
 
 .page-transition-enter {
   opacity: 0;

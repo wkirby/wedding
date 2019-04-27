@@ -2,9 +2,7 @@ import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import { Layout } from "../components/Layout";
 import { Title, Subtitle } from "../components/Title";
-
-const Section = props => <section {...props} />;
-
+import { Section } from "../components/Section";
 
 export default () => {
   return (

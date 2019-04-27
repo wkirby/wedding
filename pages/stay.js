@@ -1,7 +1,8 @@
-import { Title } from "bloomer";
 import React from "react";
 import { Nav, NavItem, NavLink, Row, Col, Container } from "reactstrap";
 import { Layout } from "../components/Layout";
+import { Section } from "../components/Section";
+import { Title } from "../components/Title";
 import { LocationBlock } from "../components/LocationBlock";
 import hotelData from "../data/hotels.yaml";
 import rentalData from "../data/rentals.yaml";
@@ -42,9 +43,10 @@ const StaySidebarMenu = props => (
 export default () => {
   return (
     <Layout>
-      {/* <PageHero background={"url(static/img/hero/stay_hero.jpg)"}>
-        <Title>Where to Stay</Title>
-      </PageHero> */}
+      <Section className="text-center">
+          <Title size="1">Where to Stay</Title>
+        </Section>
+        <hr />
       <Container>
         <Row>
           <Col sm={4}>
