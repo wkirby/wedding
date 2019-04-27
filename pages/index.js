@@ -1,19 +1,13 @@
-import {
-  Container,
-  Content,
-  Hero,
-  HeroBody,
-  Subtitle,
-  Title,
-  Section
-} from "bloomer";
+import { Hero, HeroBody } from "bloomer";
 import React from "react";
 import { transitions } from "react-stack-grid";
-import { Layout } from "../components/Layout";
-import { TimelineEntry } from "../components/TimelineEntry";
-import timeline from "../data/timeline.yaml";
 import { HeroHeader } from "../components/HeroHeader";
+import { Layout } from "../components/Layout";
 import { PhotoWall } from "../components/PhotoWall";
+import { Section } from "../components/Section";
+import { TimelineEntry } from "../components/TimelineEntry";
+import { Subtitle, Title } from "../components/Title";
+import timeline from "../data/timeline.yaml";
 
 export const transition = transitions.scaleDown;
 
@@ -45,32 +39,33 @@ export default () => {
       </Section>
 
       <Section>
-        <Content hasTextAlign="centered">
-          <div className="container is-narrow">
-            <Title>10 Years Together</Title>
-            <p>
-              We get asked all the time: "what took so long?" The short answer:
-              We were busy. This summer we’re excited to celebrate our first
-              decade together with a wedding, but we’re just as excited to look
-              back at all the amazing things that have happened in the last 10
-              years. Since we first met at Bennington in 2009, we have:
-            </p>
-          </div>
-        </Content>
+        <div className="container is-narrow text-center">
+          <Title size="3">10 Years Together</Title>
+
+          <p className="lead">
+            We get asked all the time: "what took so long?" The short answer:
+            We were busy. This summer we’re excited to celebrate our first
+            decade together with a wedding, but we’re just as excited to look
+            back at all the amazing things that have happened in the last 10
+            years. Since we first met at Bennington in 2009, we have:
+          </p>
+        </div>
       </Section>
+
       <Section>
-        <div className="container is-narrow">{timelineEntries}</div>
+        {/* <div className="container is-narrow">{timelineEntries}</div> */}
       </Section>
 
       <hr />
+
       <Section>
-        <Content hasTextAlign="centered">
+        <div className="container is-narrow text-center mb-5">
           <Title>Our Favorite Memories</Title>
 
-          <small>
+          <p>
             Want to have these photos? Click here to download the whole set.
-          </small>
-        </Content>
+          </p>
+        </div>
 
         <PhotoWall />
       </Section>
