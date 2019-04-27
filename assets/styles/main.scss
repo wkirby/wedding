@@ -15,6 +15,8 @@ $grid-gutter-width: 40px;
 // this variable should match the timeout setting in _app
 $page-transition-duration: 150ms;
 
+$enable-responsive-font-sizes: true;
+
 @import "~bootstrap/scss/bootstrap";
 
 // Spacing
@@ -33,7 +35,7 @@ $spacer-xl: $spacer * 5;
 
 @import "./components/nav";
 @import "./components/type";
-
+@import "./components/hero";
 
 // @import "./components/type", "./components/layout", "./components/nav",
 //   "./components/hero", "./components/images";

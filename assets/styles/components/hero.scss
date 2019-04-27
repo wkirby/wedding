@@ -1,21 +1,8 @@
 .hero {
-  margin-bottom: $gap;
-
-  &.is-large {
-    &.is-bottom {
-      .hero-body {
-        padding-top: 14rem;
-        padding-bottom: 2rem;
-      }
-
-      @include tablet {
-        .hero-body {
-          padding-top: 32rem;
-          padding-bottom: 4rem;
-        }
-      }
-    }
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: $spacer-5;
 
   &.has-bg-img {
     background-position: center center;
@@ -31,11 +18,33 @@
       display: block;
       position: absolute;
       content: "";
-      top: 10px;
-      right: 10px;
-      bottom: 10px;
-      left: 10px;
       border: 2px solid white;
+
+      top: $spacer-2;
+      right: $spacer-2;
+      bottom: $spacer-2;
+      left: $spacer-2;
+
+      @include media-breakpoint-up(md) {
+        top: $spacer-3;
+        right: $spacer-3;
+        bottom: $spacer-3;
+        left: $spacer-3;
+      }
+    }
+  }
+
+  &.is-bottom {
+    .hero-body {
+      padding-top: 14rem;
+      padding-bottom: 2rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      .hero-body {
+        padding-top: 32rem;
+        padding-bottom: 4rem;
+      }
     }
   }
 
@@ -57,6 +66,7 @@
     z-index: 1;
 
     .title {
+      @extend .display-2;
       font-weight: normal;
       color: $white;
     }
@@ -65,15 +75,20 @@
       font-weight: 300;
       color: $white;
     }
+  }
 
-    @include tablet {
-      .title {
-        font-size: 58px;
-      }
+  .hero-body {
+    width: 100%;
+    text-align: center;
 
-      .subtitle {
-        font-size: 32px;
-      }
+    padding: 4rem;
+
+    @include media-breakpoint-up(sm) {
+      padding: 8rem 6rem;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: 16rem 8rem;
     }
   }
 }
