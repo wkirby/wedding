@@ -1,31 +1,55 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Nunito+Sans");
 
-// Fonts
-$serif: "Libre Baskerville", "Baskerville", serif;
-$sans: "Avenir", "Nunito Sans", sans-serif;
+// // Fonts
+$font-family-serif: "Libre Baskerville", "Baskerville", serif;
+$font-family-sans-serif: "Avenir", "Nunito Sans", sans-serif;
 
-// Colors
+// // Colors
 $paper: #f8f7f5;
-$green: #5a7955;
 $red: #e23b50;
-$text: #555558;
+$primary: #5a7955;
+$text-color: #555558;
 
-// Sizes
-$narrow: 640px;
-$gap: 80px;
-$column-gap: 40px;
-
-$section-padding: 3rem 0;
+$grid-gutter-width: 40px;
 
 // this variable should match the timeout setting in _app
 $page-transition-duration: 150ms;
 
-// Update Bulma's global variables
-$family-secondary: $serif;
-$primary: $green;
-$link: $green;
-$footer-background-color: $paper;
+@import "~bootstrap/scss/bootstrap";
 
-@import "~bulma/bulma";
-@import "./components/type", "./components/layout", "./components/nav",
-  "./components/hero", "./components/images";
+// Spacing
+
+$spacer-1: $spacer * 0.25;
+$spacer-2: $spacer * 0.5;
+$spacer-3: $spacer;
+$spacer-4: $spacer * 1.5;
+$spacer-5: $spacer * 3;
+
+$spacer-xs: $spacer * 0.125;
+$spacer-sm: $spacer-1;
+$spacer-md: $spacer-3;
+$spacer-lg: $spacer-5;
+$spacer-xl: $spacer * 5;
+
+@import "./components/nav";
+
+// @import "./components/type", "./components/layout", "./components/nav",
+//   "./components/hero", "./components/images";
+
+.page-transition-enter {
+  opacity: 0;
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transition: opacity $page-transition-duration ease-in-out;
+}
+
+.page-transition-exit {
+  opacity: 1;
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transition: opacity $page-transition-duration ease-in-out;
+}

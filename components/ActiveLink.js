@@ -7,7 +7,7 @@ const ActiveLink = ({
   router,
   children,
   href,
-  activeClassName,
+  activeClassName="active",
   ...otherProps
 }) => {
   const child = Children.only(children);
@@ -16,7 +16,7 @@ const ActiveLink = ({
   });
 
   return (
-    <Link href={href} {...otherProps}>
+    <Link href={href} {...otherProps} passHref>
       {React.cloneElement(child, { className })}
     </Link>
   );

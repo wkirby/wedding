@@ -1,55 +1,86 @@
-import { LevelItem } from "bloomer";
-import Link from "next/link";
 import React from "react";
-import ReactTooltip from 'react-tooltip'
+import {
+  Container,
+  Collapse,
+  Nav as BSNav,
+  Navbar,
+  NavbarBrand,
+  NavbarToggler,
+  NavItem,
+  NavLink
+} from "reactstrap";
 import ActiveLink from "./ActiveLink";
-import { Level } from "bloomer/lib/components/Level/Level";
+import ReactTooltip from "react-tooltip";
 
 const Logo = props => (
   <h1 className="logotype">
-    <img src="/static/img/berry.png" alt="berries" style={{ height: 40 }} />
+    <img src="/static/img/berry.png" alt="berries" />
     Wyatt <em>&amp;</em> Jessica
   </h1>
 );
 
-const NavItem = ({ children, ...props }) => (
-  <LevelItem>
-    <ActiveLink {...props}>
-      <a className="nav-item">{children}</a>
-    </ActiveLink>
-  </LevelItem>
-);
+export class Nav extends React.Component {
+  constructor(props) {
+    super(props);
 
-export const Nav = props => {
-  return (
-    <nav className="nav">
-      <Level>
-        <NavItem activeClassName="is-active" href="/venues">
-          the venues
-        </NavItem>
+    this.toggleNavbar = this.toggleNavbar.bind(this);
+    this.state = {
+      collapsed: true
+    };
+  }
 
-        <NavItem activeClassName="is-active" href="/stay">
-          where to stay
-        </NavItem>
+  toggleNavbar() {
+    this.setState({
+      collapsed: !this.state.collapsed
+    });
+  }
 
-        <LevelItem>
-          <ActiveLink href="/">
-            <a data-tip="Home">
-              <Logo />
-              <ReactTooltip delayShow={350} place="bottom" type="dark" effect="solid" />
-            </a>
+  render() {
+    return (
+      <Navbar color="transparent" light expand="md" className="centered mb-3">
+        <NavbarBrand href="/" className="mr-auto d-inline-block d-md-none">
+          <Logo />
+        </NavbarBrand>
 
-          </ActiveLink>
-        </LevelItem>
+        <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+        <Collapse isOpen={!this.state.collapsed} navbar>
+          <BSNav navbar>
+            <NavItem>
+              <ActiveLink href="/venues">
+                <NavLink>The Venues</NavLink>
+              </ActiveLink>
+            </NavItem>
+            <NavItem>
+              <ActiveLink href="/stay">
+                <NavLink>Where to Stay</NavLink>
+              </ActiveLink>
+            </NavItem>
 
-        <NavItem activeClassName="is-active" href="/activities">
-          what to do
-        </NavItem>
+            <NavItem className="d-none d-md-inline-block">
+              <NavbarBrand href="/">
+                <Logo />
+                <ReactTooltip
+                  delayShow={350}
+                  place="bottom"
+                  type="dark"
+                  effect="solid"
+                />
+              </NavbarBrand>
+            </NavItem>
 
-        <NavItem activeClassName="is-active" href="/registry">
-          registry
-        </NavItem>
-      </Level>
-    </nav>
-  );
-};
+            <NavItem>
+              <ActiveLink href="/activities">
+                <NavLink>What to Do</NavLink>
+              </ActiveLink>
+            </NavItem>
+            <NavItem>
+              <ActiveLink href="/registry">
+                <NavLink>Registry</NavLink>
+              </ActiveLink>
+            </NavItem>
+          </BSNav>
+        </Collapse>
+      </Navbar>
+    );
+  }
+}
