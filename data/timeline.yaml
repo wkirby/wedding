@@ -1,12 +1,12 @@
-- text: Befriended Sebastian (photo of Sebo)
+- text: Befriended Sebastian
   image: timeline/sebastian.jpg
-- text: Graduated from College (photo of Bennington)
-  image:
-- text: Moved to Seattle (photo of Seattle)
+- text: Graduated from College
+  image: timeline/bennington.jpg
+- text: Moved to Seattle
   image: timeline/seattle.jpg
-- text: Started a Business (group photo of Apsis)
-  image:
-- text: Graduated from a Master’s Program (photo of Graduation)
+- text: Started a Business
+  image: timeline/apsis.jpg
+- text: Graduated from a Master’s Program
   image: timeline/masters.jpg
-- text: Become a Teacher (photo of Jessica’s Classroom)
+- text: Become a Teacher
   image: timeline/teacher.jpg

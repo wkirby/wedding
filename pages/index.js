@@ -5,6 +5,7 @@ import { HeroHeader } from "../components/HeroHeader";
 import { Layout } from "../components/Layout";
 import { PhotoWall } from "../components/PhotoWall";
 import { Section } from "../components/Section";
+import { SectionHeader } from "../components/SectionHeader";
 import { TimelineEntry } from "../components/TimelineEntry";
 import { Subtitle, Title } from "../components/Title";
 
@@ -38,9 +39,10 @@ export default () => {
         </HeroBody>
       </Hero>
 
+      <hr/>
       <Section>
         <div className="container is-narrow text-center">
-          <Title size="3">10 Years Together</Title>
+          <SectionHeader title="Ten Years Together" />
 
           <p className="lead">
             We get asked all the time: "what took so long?" The short answer: We
@@ -53,17 +55,24 @@ export default () => {
       </Section>
 
       <Section>
-        <div className="container is-narrow">{timelineEntries}</div>
+        <div className="container is-narrow text-center">
+          {timelineEntries}
+
+          <p className="mt-5 lead">&hellip; and we can't wait to find out what happens next.</p>
+        </div>
       </Section>
 
       <hr />
 
       <Section>
         <div className="container is-narrow text-center mb-5">
-          <Title>Our Favorite Memories</Title>
-
-          <p>
-            Want to have these photos? Click here to download the whole set.
+          <SectionHeader title="Our Favorite Memories" />
+          <p className="lead">
+            Want to have these photos?{" "}
+            <a href="/static/img/wj_photo_gallery.zip" download>
+              Click here to download
+            </a>{" "}
+            the whole set.
           </p>
         </div>
 

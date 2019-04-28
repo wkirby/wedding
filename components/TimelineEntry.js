@@ -1,31 +1,28 @@
-import { Media, MediaLeft, MediaContent, MediaRight } from "bloomer";
+import { Media } from "reactstrap";
 import React from "react";
+import cx from "classnames";
+
 export const TimelineEntry = ({ src, children, left = true }) => {
+  const classes = cx(
+    ["d-sm-flex", "justify-content-space-between", "align-items-center"],
+    {
+      "flex-row-reverse": left
+    }
+  );
   const image = (
-    <figure className="image is-256x256">
-      <img className="is-rounded" src={src} alt="" />
-    </figure>
+    <div className="image is-256x256 m-auto">
+      <img className="rounded-circle" src={src} alt="" />
+    </div>
   );
   const content = (
-    <MediaContent className="has-text-centered">
-      <span className="is-size-4">{children}</span>
-    </MediaContent>
+    <div className="text-center mx-4">
+      <h4>{children}</h4>
+    </div>
   );
   return (
-    <div className="timeline-en">
-      <Media className="is-centered">
-        {left ? (
-          <>
-            <MediaLeft>{image}</MediaLeft>
-            {content}
-          </>
-        ) : (
-          <>
-            {content}
-            <MediaRight>{image}</MediaRight>
-          </>
-        )}
-      </Media>
+    <div className={classes}>
+      <div className="my-3 my-md-0">{image}</div>
+      {content}
     </div>
   );
 };
