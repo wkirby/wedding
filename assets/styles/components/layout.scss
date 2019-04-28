@@ -1,10 +1,44 @@
+body {
+  background-color: $gray-100;
+}
+
 #main {
-  max-width: 1440px;
-  margin: 0 auto;
+
+  background-color: $body-bg;
+
+
+  @include media-breakpoint-up(md) {
+    border: 1px solid $gray-200;
+    border-left: 1px solid $gray-200;
+    border-right: 1px solid $gray-200;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-shadow: 0 1px 5px rgba($gray-200, 0.25);
+  }
 }
 
 .container {
   &.is-narrow {
-    max-width: $narrow;
+    @include media-breakpoint-up(md) {
+      max-width: $narrow;
+    }
   }
+}
+
+.row {
+  &.v-center {
+    align-items: center;
+  }
+}
+
+.section {
+  margin: $spacer-5 0;
+}
+
+.section-header {
+  @extend %blockify;
+}
+
+.page-header {
+  @extend %blockify;
 }

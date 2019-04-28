@@ -1,14 +1,18 @@
 import React from "react";
 import { Col, Container, Row } from "reactstrap";
+import { Image } from "../components/Image";
 import { Layout } from "../components/Layout";
-import { Title, Subtitle } from "../components/Title";
 import { Section } from "../components/Section";
+import { SectionHeader } from "../components/SectionHeader";
+import { Timeline } from "../components/Timeline";
+import { Title } from "../components/Title";
+import scheduleData from "../data/schedule.yaml";
 
 export default () => {
   return (
     <Layout>
-      <Section className="text-center">
-        <Title size="1">
+      <Section className="page-header text-center">
+        <Title size="2" priority="1">
           The Venues
         </Title>
       </Section>
@@ -17,14 +21,18 @@ export default () => {
 
       <Section>
         <Container>
-          <Row>
+          <Row className="v-center">
             <Col md={{ size: 6, order: "last" }}>
-              <img className="img-fluid" src="static/img/audubon.jpg" />
+              <Image
+                ratio="4by3"
+                src="static/img/audubon.jpg"
+                className="has-border"
+              />
             </Col>
 
             <Col md={6}>
-              <Title>Gilsland Farm</Title>
-              <Subtitle>Ceremony</Subtitle>
+              <SectionHeader title="Gilsland Farm" subtitle="Ceremony" />
+
               <div>
                 <p>
                   Just 10 minutes away from Portland, ME, Gilsland Farm is a
@@ -54,14 +62,17 @@ export default () => {
 
       <Section>
         <Container>
-          <Row>
+          <Row className="v-center">
             <Col md={6}>
-              <img className="img-fluid" src="static/img/frontier.jpg" />
+              <Image
+                ratio="4by3"
+                src="static/img/frontier.jpg"
+                className="has-border"
+              />
             </Col>
 
             <Col md={6}>
-              <Title>The Frontier</Title>
-              <Subtitle>Reception</Subtitle>
+              <SectionHeader title="The Frontier" subtitle="Reception" />
               <div>
                 <p>
                   After the ceremony, we invite you to join us just 30 minutes
@@ -92,50 +103,25 @@ export default () => {
 
       <hr />
 
-      <Section hasTextAlign="centered">
-        <Container>
-          <Title>The Day Of</Title>
-          <div>
-            <p>
+      <Section>
+        <Container className="is-narrow text-md-center">
+          <SectionHeader title="The Day Of" />
+
+          <div className="mb-5">
+            <p className="lead">
               If you can’t join us for the whole day, we understand; here's
               where we (hope) to be at any given time:
             </p>
-
-            <ul className="is-unstyled">
-              <li>
-                <strong>1pm</strong>: Guests arrive at Gilsland Farm
-              </li>
-              <li>
-                <strong>2pm</strong>: Ceremony Starts
-              </li>
-              <li>
-                <strong>2:30pm</strong>: Refreshments Served
-              </li>
-              <li>
-                <strong>2:45pm</strong>: Wedding Party Photographs at Gilsland
-                Farm
-              </li>
-              <li>
-                <strong>4pm</strong>: Guests arrive at The Frontier
-              </li>
-              <li>
-                <strong>5pm</strong>: Dinner Served
-              </li>
-              <li>
-                <strong>6:15pm</strong>: Toasts &amp; Speeches
-              </li>
-              <li>
-                <strong>6:30pm</strong>: Dance etc.
-              </li>
-              <li>
-                <strong>10:00pm</strong>: Reception Ends
-              </li>
-            </ul>
           </div>
+
+          <Timeline entries={scheduleData} />
         </Container>
       </Section>
 
-      <img src="static/img/hero/stay_hero.jpg" className="img-fluid" />
+      <div className="image-footer mt-3">
+        <img src="static/img/hero/maine.png" className="img-fluid" />
+      </div>
+
     </Layout>
   );
 };

@@ -1,0 +1,48 @@
+@mixin overlay($offset: 0) {
+  bottom: $offset;
+  left: $offset;
+  position: absolute;
+  right: $offset;
+  top: $offset;
+}
+
+%overlay {
+  @include overlay;
+}
+
+@mixin has-border() {
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    border: 1px solid white;
+
+    top: $spacer-2;
+    right: $spacer-2;
+    bottom: $spacer-2;
+    left: $spacer-2;
+
+    @include media-breakpoint-up(md) {
+      top: $spacer-3;
+      right: $spacer-3;
+      bottom: $spacer-3;
+      left: $spacer-3;
+    }
+  }
+}
+
+%has-border {
+  @include has-border;
+}
+
+@mixin blockify() {
+  margin: $spacer-3 auto;
+
+  @include media-breakpoint-up(md) {
+    margin: $spacer-5 auto;
+  }
+}
+
+%blockify {
+  @include blockify();
+}

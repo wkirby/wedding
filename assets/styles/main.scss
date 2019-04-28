@@ -1,46 +1,22 @@
+// Dependencies
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700|Nunito+Sans");
+@import '~modularscale-sass/stylesheets/modularscale';
+@import "./components/overrides";
 
-// // Fonts
-$font-family-serif: "Libre Baskerville", "Baskerville", serif;
-$font-family-sans-serif: "Avenir", "Nunito Sans", sans-serif;
-
-// // Colors
-$paper: #f8f7f5;
-$red: #e23b50;
-$primary: #5a7955;
-$text-color: #555558;
-
-$grid-gutter-width: 40px;
-$narrow: 640px;
-
-// this variable should match the timeout setting in _app
-$page-transition-duration: 150ms;
-
-$enable-responsive-font-sizes: true;
-
+// Import Bootstrap with Overrides
 @import "~bootstrap/scss/bootstrap";
 
-// Spacing
+// Custom SCSS
+@import "./components/vars";
+@import "./components/mixins";
 
-$spacer-1: $spacer * 0.25;
-$spacer-2: $spacer * 0.5;
-$spacer-3: $spacer;
-$spacer-4: $spacer * 1.5;
-$spacer-5: $spacer * 3;
-
-$spacer-xs: $spacer * 0.125;
-$spacer-sm: $spacer-1;
-$spacer-md: $spacer-3;
-$spacer-lg: $spacer-5;
-$spacer-xl: $spacer * 5;
-
+@import "./components/footer";
+@import "./components/hero";
+@import "./components/images";
 @import "./components/layout";
 @import "./components/nav";
 @import "./components/type";
-@import "./components/hero";
-@import "./components/footer";
-
-// @import "./components/images";
+@import "./components/timeline";
 
 .page-transition-enter {
   opacity: 0;

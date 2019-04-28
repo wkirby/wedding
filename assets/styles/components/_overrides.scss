@@ -1,0 +1,34 @@
+// Fonts
+$font-family-serif: "Libre Baskerville", "Baskerville", serif;
+$font-family-sans-serif: "Avenir", "Nunito Sans", sans-serif;
+
+// Colors
+$paper: #f8f7f5;
+$red: #e23b50;
+$primary: #5a7955;
+$text-color: #555558;
+
+$grid-gutter-width: 40px;
+$enable-responsive-font-sizes: true;
+
+// Type
+$modularscale: (
+  base: 1rem,
+  ratio: 1.25
+);
+
+$font-size-base: ms(0); // Assumes the browser default, typically `16px`
+$font-size-lg: ms(1);
+$font-size-sm: ms(-1);
+
+$h1-font-size: ms(5);
+$h2-font-size: ms(4);
+$h3-font-size: ms(3);
+$h4-font-size: ms(2);
+$h5-font-size: ms(1);
+$h6-font-size: ms(0);
+
+$display1-size: ms(8);
+$display2-size: ms(7);
+$display3-size: ms(6);
+$display4-size: ms(4);

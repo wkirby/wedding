@@ -1,0 +1,56 @@
+$marker_size: 18px;
+$timeline_gap: 36px;
+$timeline_width: 2px;
+
+.timeline {
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: $timeline_gap;
+  border-left: $timeline_width solid $gray-300;
+
+  &__item {
+    position: relative;
+    margin-bottom: $spacer-2;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: $spacer-3;
+    }
+
+    &::before {
+      width: $marker_size;
+      height: $marker_size;
+      display: block;
+      content: "";
+
+      position: absolute;
+      border-radius: 50%;
+      left: -1 * $timeline_gap - ($marker_size / 2) - ($timeline_width / 2);
+      border: 2px solid $gray-200;
+      background-color: $body-bg;
+
+      transition: background-color ease-in-out 0.25s,
+        border-color ease-in-out 0.25s;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  &__time {
+    font-weight: bold;
+    margin-right: $spacer-3;
+    width: 80px;
+  }
+
+  &__description {
+    color: $text-muted;
+  }
+}

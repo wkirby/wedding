@@ -1,2 +1,6 @@
 import React from "react";
-export const Section = props => <section {...props} />;
+import cx from "classnames";
+export const Section = ({ className, ...props }) => {
+  const classes = cx("section", className);
+  return <section className={classes} {...props} />;
+};

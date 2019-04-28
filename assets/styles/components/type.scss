@@ -1,9 +1,17 @@
 hr {
-  width: 40%;
-  margin: $spacer-3 auto;
+  width: 35%;
+  text-align: center;
+  @extend %blockify;
 
-  @include media-breakpoint-up(md) {
-    margin: $spacer-5 auto;
+  &::after {
+    color: $primary;
+    content: "❧";
+    display: inline-block;
+    position: relative;
+    top: -.75em;
+    font-size: $font-size-lg;
+    padding: 0 $spacer-2;
+    background: $body-bg;
   }
 }
 
@@ -22,4 +30,8 @@ h5 {
 
 address {
   font-style: italic;
+}
+
+.subtitle {
+  opacity: 0.85;
 }
