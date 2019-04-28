@@ -3,9 +3,7 @@ body {
 }
 
 #main {
-
   background-color: $body-bg;
-
 
   @include media-breakpoint-up(md) {
     border: 1px solid $gray-200;
@@ -45,4 +43,33 @@ body {
 
 iframe {
   border: 0;
+}
+
+.nav-tabs {
+  @include media-breakpoint-down(xs) {
+    font-size: $font-size-sm;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+
+    .nav-item {
+      white-space: nowrap;
+    }
+  }
+}
+
+.favorite {
+  background: $yellow;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  right: 1px;
+  top: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color:white;
+  border-radius: 3px;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
 }

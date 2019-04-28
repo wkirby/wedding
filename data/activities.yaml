@@ -1,0 +1,128 @@
+midcoast:
+  label: Midcoast
+  items:
+    - label: The Tontine Mall
+      favorite: true
+      description: |
+        The Tontine Mall in Brunswick is home to the EveningStar Cinema,
+        our favorite small, independent theater, and Jessica's all-time
+        favorite lunch spot — Wild Oats.
+      map: https://goo.gl/maps/mcdzrRJRDWZhUofr5
+    - label: Wilbur's of Maine Chocolate
+      description: |
+        Wilbur's of Maine is a small chocolat factory that's been making
+        delicious treats for almost 30 years. Always worth a stop!
+      map: https://goo.gl/maps/vAwstWBibAsHGccp8
+    - label: L.L. Bean Flagship Store & Freeport Outlets
+      description: |
+        Freeport is home to the flagship store for L.L. Bean, and, of
+        course, a giant Bean boot. There's an array of outlet mall
+        stores and plenty of little shops to explore.
+      map: https://goo.gl/maps/5dZaAn62yV1J3FTs5
+    - label: Reid State Park
+      favorite: true
+      description: |
+        Jessica's favorite beach, Reid State Park offers sandy shores
+        and dunes — rare for Maine's rocky coast.
+      map: https://goo.gl/maps/wNaj3EJoDtkFTek87
+    - label: Bradbury Mountain State Park
+      description: |
+        One of Maine's original state parks, Bradbury Mountain is home
+        to some beautiful hikes a short drive from Portland or Brunswick.
+      map: https://goo.gl/maps/b8Y5FXxTDjgwiMWA6
+    - label: Wolfe's Neck Woods State Park
+      description: |
+        Wolfe's Neck Woods State Park is a public recreation area
+        located on Casco Bay on the southeastern side of Freeport,
+        Maine.
+      map: https://goo.gl/maps/mCthx4izFfYzdnCt8
+    - label: Coastal Maine Botanical Gardens
+      favorite: true
+      description: |
+        Coastal Maine Botanical Gardens is a botanical garden in
+        Boothbay, Maine. Opened in 2007, Coastal Maine Botanical
+        Gardens invites visitors of all ages and abilities to create
+        and to explore meaningful connections to plants and nature
+        at their own pace.
+      map: https://goo.gl/maps/7jbA2wQVST9wtd867
+    - label: Boothbay Harbor
+      description: |
+        The quintessential coastal town, Boothbay Harbor offers
+        lots of little shops, good food, and a fun atmosphere
+        for exploring the coast. While here, make sure to take a
+        trip to Pemaquid Point Lighthouse!
+      map: https://goo.gl/maps/w28hL1s42Py2mncPA
+    - label: Pemaquid Point Lighthouse
+      description: |
+        Commissioned by John Quincy Adams in 1827, this Maine lighthouse
+        has the Fisherman's Museum on the first floor in the Keepers House.
+      map: https://goo.gl/maps/BZMYhHabtqP98WXR8
+    - label: Fort Popham & Popham Beach
+      description: |
+        Fort Popham is a Civil War-era coastal defense fortification at the
+        mouth of the Kennebec River in Phippsburg, Maine. It is located in
+        sight of the short-lived Popham Colony.
+      map: https://goo.gl/maps/kE3Uf8zGHnsQUJJG9
+portland:
+  label: Portland
+  items:
+    - label: Food!
+      favorite: true
+      description: |
+        Like the other Portland, Portland, Maine is famous for its
+        delicious food. Some of our favorites include Pai Men (ramen),
+        Blue Rooster Food Co. (hotdogs), Hot Suppa (brunch), Nosh Kitchen
+        Bar (burgers), Miss Portland Diner (diner), and Two Fat Cats (pie).
+      map: https://www.google.com/maps/search/restaurants+in+portland+maine/@43.6570302,-70.2646811,15.22z/data=!4m2!2m1!6e5
+    - label: The Old Port
+      description: |
+        The Old Port is a quaint historic district with cobblestone
+        streets and brick buildings housing clothing boutiques,
+        gourmet food stores, and souvenir shops.
+      map: https://goo.gl/maps/BDagw6ENAvXomxR7A
+    - label: Portland Head Lighthouse
+      description: |
+        Portland Head Light, is a historic lighthouse in Cape Elizabeth,
+        Maine. The light station sits on a head of land at the entrance
+        of the primary shipping channel into Portland Harbor, which
+        is within Casco Bay in the Gulf of Maine.
+      map: https://goo.gl/maps/96F1vXdkuMK4DubF7
+    - label: Portland Museum of Art
+      description: |
+        A lovely little art museum, Portland's Museum of Art offers
+        a quiet afternoon to escape the summer heat.
+      map: https://goo.gl/maps/dKPjUJ9V5wrtpiQi6
+north:
+  label: Points North
+  items:
+    - label: Maine State Museum
+      favorite: true
+      description: |
+        The Maine State Museum is one of the nation's oldest
+        state-funded museums, and sits in downtown Augusta.
+      map: https://goo.gl/maps/D7jkwwWvXBJttZw29
+    - label: Maine Maritime Museum
+      description: |
+        The Maine Maritime Museum, formerly the Bath Marine Museum,
+        offers exhibits about Maine's maritime heritage, culture
+        and the role Maine has played in regional and global maritime
+        activities.
+      map: https://goo.gl/maps/8QsPWoBZKzJH4DcV9
+    - label: Red's Eats
+      description: |
+        Perhaps the most famous lobster roll in Maine. If it's your
+        first time, this is the place to go. Expect a wait!
+      map: https://goo.gl/maps/bU4veTMWMBYBEHJv9
+    - label: Bar Harbor
+      description: |
+        A small town that serves as the gateway to Acadia National Park,
+        Bar Harbor is a fun stop for a trip
+      map: https://goo.gl/maps/DzpcBY7uhYfS6QM26
+    - label: Acadia National Park
+      description: |
+        Acadia National Park is a 47,000-acre Atlantic coast recreation
+        area primarily on Maine's Mount Desert Island. Its landscape is
+        marked by woodland, rocky beaches and glacier-scoured granite
+        peaks such as Cadillac Mountain, the highest point on the
+        United States' East Coast.
+      map: https://goo.gl/maps/LXvfTUXAa7BCPMGH8
