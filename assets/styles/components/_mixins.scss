@@ -11,22 +11,24 @@
 }
 
 @mixin has-border() {
+  position: relative;
+
   &::after {
     display: block;
     position: absolute;
     content: "";
-    border: 1px solid white;
+    border: 1px solid rgba(white, 0.75);
 
-    top: $spacer-2;
-    right: $spacer-2;
-    bottom: $spacer-2;
-    left: $spacer-2;
+    top: $spacer-1;
+    right: $spacer-1;
+    bottom: $spacer-1;
+    left: $spacer-1;
 
     @include media-breakpoint-up(md) {
-      top: $spacer-3;
-      right: $spacer-3;
-      bottom: $spacer-3;
-      left: $spacer-3;
+      top: $spacer-2;
+      right: $spacer-2;
+      bottom: $spacer-2;
+      left: $spacer-2;
     }
   }
 }

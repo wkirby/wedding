@@ -4,6 +4,7 @@
       text-transform: uppercase;
     }
   }
+
   &.bg-transparent {
     background: transparent;
   }
@@ -39,4 +40,16 @@
   font-family: $font-family-serif;
   font-weight: bold;
   font-size: $font-size-base;
+}
+
+.collapse-button {
+  &, &:focus {
+    outline: 0;
+  }
+
+  span {
+    &, &::before, &::after {
+      background-color: $gray-300;
+    }
+  }
 }

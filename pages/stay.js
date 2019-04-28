@@ -57,7 +57,9 @@ export default () => {
       <PageHeader title="Where to Stay" />
 
       <div className="my-5">
-        <img src="static/img/hero/maine.png" className="img-fluid" />
+        <figure className="has-border">
+          <img src="static/img/hero/maine.png" className="img-fluid" />
+        </figure>
       </div>
 
       <Container>
