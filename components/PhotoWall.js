@@ -2,42 +2,74 @@ import React from "react";
 import StackGrid, { easings } from "react-stack-grid";
 import { transition } from "../pages/index";
 import { StackImage } from "./StackImage";
-export const PhotoWall = ({ photos, ...props }) => {
-  return (
-    <StackGrid
-      {...photos}
-      monitorImagesLoaded
-      columnWidth={"20%"}
-      duration={600}
-      gutterWidth={10}
-      gutterHeight={10}
-      easing={easings.cubicOut}
-      appearDelay={60}
-      appear={transition.appear}
-      appeared={transition.appeared}
-      enter={transition.enter}
-      entered={transition.entered}
-      leaved={transition.leaved}
-    >
-      <StackImage src="https://picsum.photos/200/300/?random" />
-      <StackImage src="https://picsum.photos/400/600/?random" />
-      <StackImage src="https://picsum.photos/200/400/?random" />
-      <StackImage src="https://picsum.photos/200/200/?random" />
+import Lightbox from "react-images";
+import _ from "lodash";
 
-      <StackImage src="https://picsum.photos/200/300/?random" />
-      <StackImage src="https://picsum.photos/400/600/?random" />
-      <StackImage src="https://picsum.photos/200/400/?random" />
-      <StackImage src="https://picsum.photos/200/200/?random" />
+export class PhotoWall extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      lightboxIsOpen: false
+    };
+  }
 
-      <StackImage src="https://picsum.photos/800/300/?random" />
-      <StackImage src="https://picsum.photos/600/600/?random" />
-      <StackImage src="https://picsum.photos/300/400/?random" />
-      <StackImage src="https://picsum.photos/250/200/?random" />
+  openLightbox = index => {
+    this.setState({
+      currentImage: index,
+      lightboxIsOpen: true
+    });
+  };
 
-      <StackImage src="https://picsum.photos/200/300/?random" />
-      <StackImage src="https://picsum.photos/430/600/?random" />
-      <StackImage src="https://picsum.photos/220/400/?random" />
-      <StackImage src="https://picsum.photos/210/200/?random" />
-    </StackGrid>
-  );
-};
+  closeLightbox = () => {
+    this.setState({
+      lightboxIsOpen: false
+    });
+  };
+
+  gotoNextLightboxImage = () => {
+    const { currentImage } = this.state;
+    this.setState({currentImage: currentImage + 1});
+  }
+
+  gotoPrevLightboxImage = () => {
+    const { currentImage } = this.state;
+    this.setState({currentImage: currentImage - 1});
+  }
+
+  render() {
+    const { photos } = this.props;
+    const images = _.map(photos, p => {
+      return {
+        src: `static/img/gallery/${p}`,
+        thumbnail: `static/img/gallery/thumbs/${p}`
+      };
+    });
+
+    return (
+      <>
+        <div className="masonry">
+          {photos.map((p, i) => {
+            return (
+              <div className="masonry-brick" key={i}>
+                <img
+                  onClick={() => this.openLightbox(i)}
+                  src={`static/img/gallery/thumbs/${p}`}
+                  className="img-fluid"
+                />
+              </div>
+            );
+          })}
+        </div>
+
+        <Lightbox
+          currentImage={this.state.currentImage}
+          images={images}
+          isOpen={this.state.lightboxIsOpen}
+          onClickPrev={this.gotoPrevLightboxImage}
+          onClickNext={this.gotoNextLightboxImage}
+          onClose={this.closeLightbox}
+        />
+      </>
+    );
+  }
+}

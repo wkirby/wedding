@@ -7,7 +7,9 @@ import { PhotoWall } from "../components/PhotoWall";
 import { Section } from "../components/Section";
 import { TimelineEntry } from "../components/TimelineEntry";
 import { Subtitle, Title } from "../components/Title";
+
 import timeline from "../data/timeline.yaml";
+import photoData from "../data/photos.yaml";
 
 export const transition = transitions.scaleDown;
 
@@ -51,7 +53,7 @@ export default () => {
       </Section>
 
       <Section>
-        {/* <div className="container is-narrow">{timelineEntries}</div> */}
+        <div className="container is-narrow">{timelineEntries}</div>
       </Section>
 
       <hr />
@@ -65,7 +67,7 @@ export default () => {
           </p>
         </div>
 
-        <PhotoWall />
+        <PhotoWall photos={photoData} />
       </Section>
     </Layout>
   );

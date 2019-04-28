@@ -1,0 +1,23 @@
+$brick_height: 300px;
+
+.masonry {
+  column-gap: $spacer-2;
+
+  @include media-breakpoint-up(sm) {
+    columns: 2;
+  }
+
+  @include media-breakpoint-up(md) {
+    columns: 4;
+  }
+}
+
+.masonry-brick {
+  width: 100%;
+  margin-bottom: $spacer-2;
+  display: inline-block;
+
+  img {
+    width: 100%;
+  }
+}
