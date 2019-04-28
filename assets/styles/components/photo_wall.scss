@@ -18,6 +18,9 @@ $brick_height: 300px;
   display: inline-block;
 
   img {
+    &:hover {
+      cursor: pointer;
+    }
     width: 100%;
   }
 }
