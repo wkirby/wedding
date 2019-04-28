@@ -27,8 +27,13 @@ export const Layout = ({ children, ...props }) => (
     <Nav />
     {children}
 
-    <Footer>
-      <small>Hello!</small>
+    <Footer className="text-center text-muted">
+      <small>
+        Made with ❤ in Seattle by{" "}
+        <a href="https://www.apsis.io/" target="_blank">
+          Apsis Labs
+        </a>
+      </small>
     </Footer>
   </main>
 );
