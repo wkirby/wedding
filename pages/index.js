@@ -27,14 +27,14 @@ export default () => {
         isColor="dark"
         isSize="large"
         className="has-bg-img has-border has-vignette is-home is-bottom"
-        style={{ backgroundImage: `url(static/img/hero.jpg)` }}
+        style={{ backgroundImage: `url(/static/img/hero.jpg)` }}
       >
         <HeroBody>
           <HeroHeader>
             <Title>
               Wyatt <small>&amp;</small> Jessica
             </Title>
-            <Subtitle>august 3, 2019</Subtitle>
+            <Subtitle>August 3, 2019</Subtitle>
           </HeroHeader>
         </HeroBody>
       </Hero>

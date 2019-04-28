@@ -19,7 +19,7 @@ export default () => {
             <Col md={{ size: 6, order: "last" }}>
               <Image
                 ratio="4by3"
-                src="static/img/audubon.jpg"
+                src="/static/img/audubon.jpg"
                 className="has-border"
               />
             </Col>
@@ -60,7 +60,7 @@ export default () => {
             <Col md={6}>
               <Image
                 ratio="4by3"
-                src="static/img/frontier.jpg"
+                src="/static/img/frontier.jpg"
                 className="has-border"
               />
             </Col>
@@ -113,7 +113,7 @@ export default () => {
       </Section>
 
       <div className="image-footer mt-3">
-        <img src="static/img/hero/maine.png" className="img-fluid" />
+        <img src="/static/img/hero/maine.png" className="img-fluid" />
       </div>
     </Layout>
   );

@@ -58,7 +58,7 @@ export default () => {
 
       <div className="my-5">
         <figure className="has-border">
-          <img src="static/img/hero/maine.png" className="img-fluid" />
+          <img src="/static/img/hero/maine.png" className="img-fluid" />
         </figure>
       </div>
 
