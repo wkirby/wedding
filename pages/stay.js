@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, NavItem, NavLink, Row, Col, Container } from "reactstrap";
 import { Layout } from "../components/Layout";
-import { Section } from "../components/Section";
+import { PageHeader } from "../components/PageHeader";
 import { Title } from "../components/Title";
 import { LocationBlock } from "../components/LocationBlock";
 import hotelData from "../data/hotels.yaml";
@@ -43,10 +43,8 @@ const StaySidebarMenu = props => (
 export default () => {
   return (
     <Layout>
-      <Section className="text-center">
-          <Title size="1">Where to Stay</Title>
-        </Section>
-        <hr />
+      <PageHeader title="Where to Stay" />
+
       <Container>
         <Row>
           <Col sm={4}>

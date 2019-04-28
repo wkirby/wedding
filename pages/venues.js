@@ -4,20 +4,14 @@ import { Image } from "../components/Image";
 import { Layout } from "../components/Layout";
 import { Section } from "../components/Section";
 import { SectionHeader } from "../components/SectionHeader";
+import { PageHeader } from "../components/PageHeader";
 import { Timeline } from "../components/Timeline";
-import { Title } from "../components/Title";
 import scheduleData from "../data/schedule.yaml";
 
 export default () => {
   return (
     <Layout>
-      <Section className="page-header text-center">
-        <Title size="2" priority="1">
-          The Venues
-        </Title>
-      </Section>
-
-      <hr />
+      <PageHeader title="The Venues" />
 
       <Section>
         <Container>
@@ -121,7 +115,6 @@ export default () => {
       <div className="image-footer mt-3">
         <img src="static/img/hero/maine.png" className="img-fluid" />
       </div>
-
     </Layout>
   );
 };

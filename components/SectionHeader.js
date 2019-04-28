@@ -1,6 +1,7 @@
 import React from "react";
 import { Title, Subtitle } from "./Title";
 import cx from "classnames";
+
 export const SectionHeader = ({ title, subtitle, className, ...props }) => {
   const classes = cx("section-header", className);
   return (<header className={classes}>
@@ -12,3 +13,6 @@ export const SectionHeader = ({ title, subtitle, className, ...props }) => {
     </Subtitle>)}
   </header>);
 };
+
+
+
