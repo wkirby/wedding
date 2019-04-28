@@ -42,3 +42,7 @@ body {
 .page-header {
   @extend %blockify;
 }
+
+iframe {
+  border: 0;
+}

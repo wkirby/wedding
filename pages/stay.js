@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Container, Nav, NavItem, NavLink, Row } from "reactstrap";
 import { Layout } from "../components/Layout";
 import { LocationBlock } from "../components/LocationBlock";
-import { Image } from "../components/Image";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 import { SectionHeader } from "../components/SectionHeader";
