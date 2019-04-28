@@ -85,7 +85,7 @@ export default () => {
               />
               <p>
                 Maine is a small state, and there are a number of ways to get
-                here. The main airport is PWM, located in Portland, ME --- but
+                here. The main airport is PWM, located in Portland, ME &mdash; but
                 it can be a pricey destination, especially in summer.
               </p>
               <p>
