@@ -1,14 +1,6 @@
 import React from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
-import ReactTooltip from "react-tooltip";
-import {
-  Collapse,
-  Nav as BSNav,
-  Navbar,
-  NavbarBrand,
-  NavItem,
-  NavLink
-} from "reactstrap";
+import { Collapse, Nav as BSNav, Navbar, NavbarBrand, NavItem, NavLink } from "reactstrap";
 import ActiveLink from "./ActiveLink";
 
 const Logo = () => (
@@ -71,12 +63,6 @@ export class Nav extends React.Component {
             <NavItem className="d-none d-md-inline-block">
               <NavbarBrand href="/">
                 <Logo />
-                <ReactTooltip
-                  delayShow={350}
-                  place="bottom"
-                  type="dark"
-                  effect="solid"
-                />
               </NavbarBrand>
             </NavItem>
 

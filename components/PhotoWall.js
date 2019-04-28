@@ -1,9 +1,6 @@
-import React from "react";
-import StackGrid, { easings } from "react-stack-grid";
-import { transition } from "../pages/index";
-import { StackImage } from "./StackImage";
-import Lightbox from "react-images";
 import _ from "lodash";
+import React from "react";
+import Lightbox from "react-images";
 
 export class PhotoWall extends React.Component {
   constructor(props) {

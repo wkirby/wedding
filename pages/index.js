@@ -1,6 +1,4 @@
-import { Hero, HeroBody } from "bloomer";
 import React from "react";
-import { transitions } from "react-stack-grid";
 import { HeroHeader } from "../components/HeroHeader";
 import { Layout } from "../components/Layout";
 import { PhotoWall } from "../components/PhotoWall";
@@ -8,11 +6,8 @@ import { Section } from "../components/Section";
 import { SectionHeader } from "../components/SectionHeader";
 import { TimelineEntry } from "../components/TimelineEntry";
 import { Subtitle, Title } from "../components/Title";
-
-import timeline from "../data/timeline.yaml";
 import photoData from "../data/photos.yaml";
-
-export const transition = transitions.scaleDown;
+import timeline from "../data/timeline.yaml";
 
 export default () => {
   const timelineEntries = timeline.map((t, i) => (
@@ -23,23 +18,21 @@ export default () => {
 
   return (
     <Layout pageTitle="We're Getting Married">
-      <Hero
-        isColor="dark"
-        isSize="large"
-        className="has-bg-img has-border has-vignette is-home is-bottom"
+      <header
+        className="hero has-bg-img has-border has-vignette is-home is-bottom"
         style={{ backgroundImage: `url(/static/img/hero.jpg)` }}
       >
-        <HeroBody>
+        <div className="hero-body">
           <HeroHeader>
             <Title>
               Wyatt <small>&amp;</small> Jessica
             </Title>
             <Subtitle>August 3, 2019</Subtitle>
           </HeroHeader>
-        </HeroBody>
-      </Hero>
+        </div>
+      </header>
 
-      <hr/>
+      <hr />
       <Section>
         <div className="container is-narrow text-center">
           <SectionHeader title="Ten Years Together" />
@@ -58,7 +51,9 @@ export default () => {
         <div className="container is-narrow text-center">
           {timelineEntries}
 
-          <p className="mt-5 lead">&hellip; and we can't wait to find out what happens next.</p>
+          <p className="mt-5 lead">
+            &hellip; and we can't wait to find out what happens next.
+          </p>
         </div>
       </Section>
 
