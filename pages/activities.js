@@ -31,7 +31,7 @@ const FavoriteTag = ({ id, ...props }) => {
   );
 };
 
-const ActivityCard = ({ label, description, map, id, favorite, ...props }) => {
+const ActivityCard = ({ label, website, description, map, id, favorite, ...props }) => {
   return (
     <Card className="mb-3" {...props}>
       <CardBody>
@@ -40,12 +40,23 @@ const ActivityCard = ({ label, description, map, id, favorite, ...props }) => {
           <strong>{label}</strong>
         </CardTitle>
         <p>{description}</p>
-        <p>
-          <Icon className="typcn typcn-map" />{" "}
-          <a href={map} title={`Map to ${label}`} target="_blank">
-            View on Map
-          </a>
-        </p>
+        {map && (
+          <p>
+            <Icon className="typcn typcn-map" />{" "}
+            <a href={map} title={`Map to ${label}`} target="_blank">
+              View on Map
+            </a>
+          </p>
+        )}
+
+        {website && (
+          <p>
+            <Icon className="typcn typcn-compass" />{" "}
+            <a href={website} title={`Link to ${label}`} target="_blank">
+              View Website
+            </a>
+          </p>
+        )}
       </CardBody>
     </Card>
   );

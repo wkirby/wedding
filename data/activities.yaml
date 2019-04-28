@@ -13,6 +13,13 @@ midcoast:
         Wilbur's of Maine is a small chocolat factory that's been making
         delicious treats for almost 30 years. Always worth a stop!
       map: https://goo.gl/maps/vAwstWBibAsHGccp8
+    - label: Massage Therapy with Eliza Tilbor
+      favorite: true
+      description: |
+        Take time to appreciate yourself and your body. Self care is often put
+        to the side as we go through our busy lives. Visit Eliza (one of Jessica's
+        bridesmaids) for a relaxing massage!
+      website: https://elizatilbor.com/
     - label: L.L. Bean Flagship Store & Freeport Outlets
       description: |
         Freeport is home to the flagship store for L.L. Bean, and, of
