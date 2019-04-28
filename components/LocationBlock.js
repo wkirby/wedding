@@ -7,7 +7,11 @@ export const LocationBlock = ({ children, ...props }) => {
   return (
     <Card className="mb-3" {...props}>
       <CardBody>
-        {label && <CardTitle><strong>{label}</strong></CardTitle>}
+        {label && (
+          <CardTitle>
+            <strong>{label}</strong>
+          </CardTitle>
+        )}
 
         {details && (
           <p>
@@ -18,14 +22,19 @@ export const LocationBlock = ({ children, ...props }) => {
         {address && <address>{address}</address>}
 
         {phone && (
-          <a href={`tel:${phone}`}>
-            <Icon className="typcn typcn-phone" /> {phone}
-          </a>
+          <span>
+            <Icon className="typcn typcn-phone" />
+            <a href={`tel:${phone}`}>{phone}</a>
+          </span>
         )}
+
         {website && (
-          <a href={website} target="_blank">
-            <Icon className="typcn typcn-compass" /> Website
-          </a>
+          <span>
+            <Icon className="typcn typcn-compass" />
+            <a href={website} target="_blank">
+              Visit Website
+            </a>
+          </span>
         )}
       </CardBody>
     </Card>
