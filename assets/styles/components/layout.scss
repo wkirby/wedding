@@ -72,4 +72,5 @@ iframe {
   color:white;
   border-radius: 3px;
   clip-path: polygon(100% 0, 0 0, 100% 100%);
+  -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
 }

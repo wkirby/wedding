@@ -27,6 +27,7 @@
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
     "iframe-resizer": "^4.1.1",
+    "jquery": "^3.4.0",
     "js-yaml-loader": "^1.0.1",
     "lodash": "^4.17.11",
     "modularscale-sass": "^3.0.8",
@@ -37,9 +38,11 @@
     "react-dom": "^16.8.6",
     "react-images": "^0.5.19",
     "reactstrap": "^8.0.0",
-    "smartquotes": "^2.3.1"
+    "smartquotes": "^2.3.1",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
+    "autoprefixer": "^9.5.1",
     "node-sass": "^4.12.0"
   }
 }
