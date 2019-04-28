@@ -1,22 +1,23 @@
 import React from "react";
+import { HamburgerSqueeze } from "react-animated-burgers";
 import ReactTooltip from "react-tooltip";
 import {
   Collapse,
   Nav as BSNav,
   Navbar,
   NavbarBrand,
-  NavbarToggler,
   NavItem,
   NavLink
 } from "reactstrap";
 import ActiveLink from "./ActiveLink";
-import { HamburgerSqueeze } from "react-animated-burgers";
 
-const Logo = props => (
-  <h1 className="logotype">
-    <img src="/static/img/berry.png" alt="berries" />
-    Wyatt <em>&amp;</em> Jessica
-  </h1>
+const Logo = () => (
+  <div className="logo">
+    <img src="/static/img/berry.png" alt="berries" className="logo__image" />
+    <h1 className="logotype">
+      Wyatt <small><em>&amp;</em></small> Jessica
+    </h1>
+  </div>
 );
 
 export class Nav extends React.Component {
@@ -41,7 +42,7 @@ export class Nav extends React.Component {
         color="transparent"
         light
         expand="md"
-        className="centered wj mb-5 pt-2 pt-md-3"
+        className="centered wj mb-md-3 pt-2 pt-md-3"
       >
         <NavbarBrand href="/" className="mr-auto d-inline-block d-md-none">
           <Logo />
@@ -50,7 +51,7 @@ export class Nav extends React.Component {
         <HamburgerSqueeze
           buttonWidth={32}
           toggleButton={this.toggleNavbar}
-          className="mr-2 collapse-button navbar-toggler"
+          className="ml-auto collapse-button navbar-toggler"
           isActive={!this.state.collapsed}
         />
 

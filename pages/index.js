@@ -20,34 +20,32 @@ export default () => {
 
   return (
     <Layout pageTitle="We're Getting Married">
-      <Section>
-        <Hero
-          isColor="dark"
-          isSize="large"
-          className="has-bg-img has-border has-vignette is-home is-bottom"
-          style={{ backgroundImage: `url(static/img/hero.jpg)` }}
-        >
-          <HeroBody>
-            <HeroHeader>
-              <Title>
-                Wyatt <small>&amp;</small> Jessica
-              </Title>
-              <Subtitle>august 3, 2019</Subtitle>
-            </HeroHeader>
-          </HeroBody>
-        </Hero>
-      </Section>
+      <Hero
+        isColor="dark"
+        isSize="large"
+        className="has-bg-img has-border has-vignette is-home is-bottom"
+        style={{ backgroundImage: `url(static/img/hero.jpg)` }}
+      >
+        <HeroBody>
+          <HeroHeader>
+            <Title>
+              Wyatt <small>&amp;</small> Jessica
+            </Title>
+            <Subtitle>august 3, 2019</Subtitle>
+          </HeroHeader>
+        </HeroBody>
+      </Hero>
 
       <Section>
         <div className="container is-narrow text-center">
           <Title size="3">10 Years Together</Title>
 
           <p className="lead">
-            We get asked all the time: "what took so long?" The short answer:
-            We were busy. This summer we’re excited to celebrate our first
-            decade together with a wedding, but we’re just as excited to look
-            back at all the amazing things that have happened in the last 10
-            years. Since we first met at Bennington in 2009, we have:
+            We get asked all the time: "what took so long?" The short answer: We
+            were busy. This summer we’re excited to celebrate our first decade
+            together with a wedding, but we’re just as excited to look back at
+            all the amazing things that have happened in the last 10 years.
+            Since we first met at Bennington in 2009, we have:
           </p>
         </div>
       </Section>
