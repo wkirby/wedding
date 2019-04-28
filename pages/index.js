@@ -49,7 +49,7 @@ export default () => {
             were busy. This summer we’re excited to celebrate our first decade
             together with a wedding, but we’re just as excited to look back at
             all the amazing things that have happened in the last 10 years.
-            Since we first met at Bennington in 2009, we have:
+            Since we first met at Bennington in 2009, we:
           </p>
         </div>
       </Section>
