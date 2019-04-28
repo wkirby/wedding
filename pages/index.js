@@ -19,7 +19,7 @@ export default () => {
   ));
 
   return (
-    <Layout>
+    <Layout pageTitle="We're Getting Married">
       <Section>
         <Hero
           isColor="dark"

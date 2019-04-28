@@ -7,7 +7,7 @@ import { PageHeader } from "../components/PageHeader";
 
 export default () => {
   return (
-    <Layout>
+    <Layout pageTitle="Registry">
       <PageHeader title="Registry" />
       <Container className="is-narrow">
         <p className="lead">

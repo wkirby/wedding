@@ -5,7 +5,7 @@ import { Footer } from "../components/Footer";
 import "../assets/styles/main.scss";
 import { Nav } from "./Nav";
 
-export const Layout = ({ children, ...props }) => (
+export const Layout = ({ pageTitle, children, ...props }) => (
   <main id="main" {...props}>
     <Head>
       <link
@@ -21,7 +21,7 @@ export const Layout = ({ children, ...props }) => (
         integrity="sha256-hmDtEnmZFvJ3zLsfobp03CSD3/qRCJmY3f7Vqf6zIgA="
         crossorigin="anonymous"
       />
-      <title>Wyatt &amp; Jessica</title>
+      <title>{pageTitle && `${pageTitle} |`} Wyatt &amp; Jessica</title>
     </Head>
 
     <Nav />

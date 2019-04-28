@@ -45,7 +45,7 @@ iframe {
   border: 0;
 }
 
-.nav-tabs {
+.nav-pills.nav-justified {
   @include media-breakpoint-down(xs) {
     font-size: $font-size-sm;
     overflow-x: auto;

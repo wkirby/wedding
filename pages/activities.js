@@ -13,6 +13,7 @@ import {
   TabPane,
   UncontrolledTooltip
 } from "reactstrap";
+import Head from "next/head";
 import { Icon } from "../components/Icon";
 import { Layout } from "../components/Layout";
 import { PageHeader } from "../components/PageHeader";
@@ -94,13 +95,14 @@ class ActivityPage extends React.Component {
 
   render = () => {
     return (
-      <Layout>
+      <Layout pageTitle="What to Do">
         <PageHeader title="What to Do" />
 
         <Container className="is-narrow">
           <p className="lead">
             We are so excited to share Maine with all of our guests, and all our
-            favorite things to do in and around Portland.
+            favorite things to do up and down the coast of Maine. If you have
+            any questions about any activities, please don't hesitate to ask!
           </p>
 
           <Section>

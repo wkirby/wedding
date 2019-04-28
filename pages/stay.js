@@ -53,7 +53,7 @@ const StaySidebarMenu = props => (
 
 export default () => {
   return (
-    <Layout>
+    <Layout pageTitle="Where to Stay">
       <PageHeader title="Where to Stay" />
 
       <div className="my-5">

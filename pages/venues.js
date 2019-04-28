@@ -10,7 +10,7 @@ import scheduleData from "../data/schedule.yaml";
 
 export default () => {
   return (
-    <Layout>
+    <Layout pageTitle="The Venues">
       <PageHeader title="The Venues" />
 
       <Section>
