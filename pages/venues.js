@@ -2,12 +2,12 @@ import React from "react";
 import { Col, Container, Row } from "reactstrap";
 import { Image } from "../components/Image";
 import { Layout } from "../components/Layout";
+import { LinkList } from "../components/LinkList";
+import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 import { SectionHeader } from "../components/SectionHeader";
-import { PageHeader } from "../components/PageHeader";
 import { Timeline } from "../components/Timeline";
 import scheduleData from "../data/schedule.yaml";
-import { LinkList } from "../components/LinkList";
 
 export default () => {
   const gilslandLinks = [
@@ -47,7 +47,7 @@ export default () => {
               <Image
                 ratio="4by3"
                 src="/static/img/audubon.jpg"
-                className="has-border"
+                className="has-border mb-md-0"
               />
             </Col>
 
@@ -60,10 +60,10 @@ export default () => {
                   beautiful nature preserve run by the Maine Audubon Society.
                   Situated alongside the Presumpscot River estuary, our wedding
                   will be held in the center’s Apple Orchard, surrounded by
-                  trees and &mdash; of course &mdash; birds. Before and after the ceremony,
-                  we invite our guests to explore the beautiful Maine landscape,
-                  with over two miles of easy trails that will take you through
-                  meadows, by a pond, and along the river.
+                  trees and &mdash; of course &mdash; birds. Before and after
+                  the ceremony, we invite our guests to explore the beautiful
+                  Maine landscape, with over two miles of easy trails that will
+                  take you through meadows, by a pond, and along the river.
                 </p>
 
                 <p>Light refreshments to be served.</p>
@@ -90,7 +90,7 @@ export default () => {
               <Image
                 ratio="4by3"
                 src="/static/img/frontier.jpg"
-                className="has-border"
+                className="has-border mb-md-0"
               />
             </Col>
 
