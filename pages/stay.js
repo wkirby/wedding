@@ -8,6 +8,7 @@ import { SectionHeader } from "../components/SectionHeader";
 import hotelData from "../data/hotels.yaml";
 import rentalData from "../data/rentals.yaml";
 import travelData from "../data/travel.yaml";
+import Link from "next/link";
 
 const NavItemHeader = ({ children, ...props }) => {
   return (
@@ -72,10 +73,12 @@ export default () => {
             <p className="lead">
               Maine’s midcoast region is a beautiful destination for a summer
               vacation. Because we have two venues, there are a wide range of
-              places you could stay for your visit — depending on your
+              places you could stay for your visit &mdash; depending on your
               preferences. Generally speaking, anywhere between Portland, ME and
               Brunswick, ME along I-295 will suit you just fine, and we
-              encourage you to explore the region while you’re here.
+              encourage you to{" "}
+              <Link href="/activities">explore the region</Link> while you're
+              here.
             </p>
 
             <Section>
@@ -90,8 +93,11 @@ export default () => {
               </p>
               <p>
                 The next best airport is Boston Logan, in Boston, MA. From
-                there, you can rent a car and take I-95 north to Portland. The
-                drive is pleasant, and takes just about 2 hours.
+                there, you can rent a car and take I-95 north to Portland.{" "}
+                <a href="https://goo.gl/maps/3SQNZpPMg16xPM7Y6" target="_blank">
+                  The drive is pleasant, and takes just about 2 hours
+                </a>
+                .
               </p>
               <p>
                 If renting a car is not your thing, Concord Coach Lines runs

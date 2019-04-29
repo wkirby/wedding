@@ -60,7 +60,7 @@ export default () => {
                   beautiful nature preserve run by the Maine Audubon Society.
                   Situated alongside the Presumpscot River estuary, our wedding
                   will be held in the center’s Apple Orchard, surrounded by
-                  trees and — of course — birds. Before and after the ceremony,
+                  trees and &mdash; of course &mdash; birds. Before and after the ceremony,
                   we invite our guests to explore the beautiful Maine landscape,
                   with over two miles of easy trails that will take you through
                   meadows, by a pond, and along the river.
