@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Nav, NavItem, NavLink, Row } from "reactstrap";
 import { Layout } from "../components/Layout";
-import { LocationBlock } from "../components/LocationBlock";
+import { ActivityCard } from "../components/ActivityCard";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 import { SectionHeader } from "../components/SectionHeader";
@@ -85,8 +85,8 @@ export default () => {
               />
               <p>
                 Maine is a small state, and there are a number of ways to get
-                here. The main airport is PWM, located in Portland, ME &mdash; but
-                it can be a pricey destination, especially in summer.
+                here. The main airport is PWM, located in Portland, ME &mdash;
+                but it can be a pricey destination, especially in summer.
               </p>
               <p>
                 The next best airport is Boston Logan, in Boston, MA. From
@@ -101,7 +101,9 @@ export default () => {
 
               <div className="my-3">
                 {travelData.map((t, i) => (
-                  <LocationBlock id={`travel-${i}`} {...t} key={i} />
+                  <div id={`travel-${i}`}>
+                    <ActivityCard {...t} key={i} />
+                  </div>
                 ))}
               </div>
             </Section>
@@ -121,7 +123,9 @@ export default () => {
               </p>
               <div className="my-3">
                 {rentalData.map((t, i) => (
-                  <LocationBlock id={`rental-${i}`} {...t} key={i} />
+                  <div id={`rental-${i}`}>
+                    <ActivityCard {...t} key={i} />
+                  </div>
                 ))}
               </div>
             </Section>
@@ -136,7 +140,9 @@ export default () => {
 
               <div className="my-3">
                 {hotelData.map((t, i) => (
-                  <LocationBlock id={`hotel-${i}`} {...t} key={i} />
+                  <div id={`hotel-${i}`}>
+                    <ActivityCard {...t} key={i} />
+                  </div>
                 ))}
               </div>
             </Section>

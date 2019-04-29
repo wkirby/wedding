@@ -1,81 +1,17 @@
-import classnames from "classnames";
 import _ from "lodash";
 import React from "react";
 import {
-  Card,
-  CardBody,
-  CardTitle,
   Container,
   Nav,
-  NavItem,
-  NavLink,
   TabContent,
-  TabPane,
-  UncontrolledTooltip
-} from "reactstrap";
+  TabPane} from "reactstrap";
 import Head from "next/head";
-import { Icon } from "../components/Icon";
 import { Layout } from "../components/Layout";
 import { PageHeader } from "../components/PageHeader";
 import { Section } from "../components/Section";
 import activityData from "../data/activities.yaml";
-
-const FavoriteTag = ({ id, ...props }) => {
-  return (
-    <div className="favorite" id={`favorite-${id}`}>
-      <Icon className="typcn typcn-star" />
-      <UncontrolledTooltip placement="top" target={`favorite-${id}`}>
-        Our Favorite!
-      </UncontrolledTooltip>
-    </div>
-  );
-};
-
-const ActivityCard = ({ label, website, description, map, id, favorite, ...props }) => {
-  return (
-    <Card className="mb-3" {...props}>
-      <CardBody>
-        {favorite && <FavoriteTag id={`${id}`} />}
-        <CardTitle>
-          <strong>{label}</strong>
-        </CardTitle>
-        <p>{description}</p>
-        {map && (
-          <p>
-            <Icon className="typcn typcn-map" />{" "}
-            <a href={map} title={`Map to ${label}`} target="_blank">
-              View on Map
-            </a>
-          </p>
-        )}
-
-        {website && (
-          <p>
-            <Icon className="typcn typcn-compass" />{" "}
-            <a href={website} title={`Link to ${label}`} target="_blank">
-              View Website
-            </a>
-          </p>
-        )}
-      </CardBody>
-    </Card>
-  );
-};
-
-const TabNavLink = ({ activeTab, tabId, onClick, children, ...props }) => {
-  const active = activeTab == tabId;
-  return (
-    <NavItem {...props}>
-      <NavLink
-        href={`#${tabId}`}
-        className={classnames({ active: active })}
-        onClick={() => onClick(tabId)}
-      >
-        {children}
-      </NavLink>
-    </NavItem>
-  );
-};
+import { ActivityCard } from "../components/ActivityCard";
+import { TabNavLink } from "../components/TabNavLink";
 
 class ActivityPage extends React.Component {
   constructor(props) {

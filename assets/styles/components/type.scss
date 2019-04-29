@@ -35,3 +35,9 @@ address {
 .subtitle {
   opacity: 0.85;
 }
+
+p, ul {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

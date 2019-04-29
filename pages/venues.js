@@ -7,8 +7,35 @@ import { SectionHeader } from "../components/SectionHeader";
 import { PageHeader } from "../components/PageHeader";
 import { Timeline } from "../components/Timeline";
 import scheduleData from "../data/schedule.yaml";
+import { LinkList } from "../components/LinkList";
 
 export default () => {
+  const gilslandLinks = [
+    {
+      label: "Visit Website",
+      icon: "compass",
+      href: "https://www.maineaudubon.org/visit/gilsland-farm/"
+    },
+    {
+      label: "View on Map",
+      icon: "map",
+      href: "https://goo.gl/maps/WCJ1SY9udi44iDwu8"
+    }
+  ];
+
+  const frontierLinks = [
+    {
+      label: "Visit Website",
+      icon: "compass",
+      href: "https://www.explorefrontier.com/"
+    },
+    {
+      label: "View on Map",
+      icon: "map",
+      href: "https://goo.gl/maps/W4AUWYL3kAvMc1L88"
+    }
+  ];
+
   return (
     <Layout pageTitle="The Venues">
       <PageHeader title="The Venues" />
@@ -46,6 +73,8 @@ export default () => {
                   <br />
                   Falmouth, Maine 04105
                 </address>
+
+                <LinkList links={gilslandLinks} />
               </div>
             </Col>
           </Row>
@@ -89,6 +118,8 @@ export default () => {
                   <br />
                   Brunswick, ME 04011
                 </address>
+
+                <LinkList links={frontierLinks} />
               </div>
             </Col>
           </Row>

@@ -35,6 +35,10 @@ body {
 
 .section-header {
   @extend %blockify;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .page-header {
