@@ -4,21 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4074",
     "build": "next build",
     "preexport": "next build",
     "export": "next export",
-    "start": "next start",
-    "s3:clean": "aws s3 rm s3://wyattandjessica --recursive --profile apsis",
-    "s3:clean:staging": "aws s3 rm s3://wyattandjessica-staging --recursive --profile apsis",
-    "s3:upload": "aws s3 sync out/ s3://wyattandjessica --acl public-read --profile apsis",
-    "s3:upload:staging": "aws s3 sync out/ s3://wyattandjessica-staging --acl public-read --profile apsis",
-    "cf:invalidate": "aws cloudfront create-invalidation --distribution-id E37UXYWN6RJZWD --paths \"/*\" --profile apsis",
+    "postexport": "cp static/root/* out/ && touch out/.nojekyll",
+    "start": "next start -p 4074",
     "predeploy": "npm run export",
-    "predeploy:staging": "npm run export",
-    "deploy": "npm run s3:clean && npm run s3:upload",
-    "deploy:staging": "npm run s3:upload:staging",
-    "postdeploy": "npm run cf:invalidate"
+    "deploy": "gh-pages -d out --dotfiles"
   },
   "author": "Wyatt Kirby",
   "license": "UNLICENSED",
@@ -39,11 +32,13 @@
     "react-images": "^0.5.19",
     "reactstrap": "^8.0.0",
     "smartquotes": "^2.3.1",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "tar": ">=4.4.2"
   },
   "devDependencies": {
     "autoprefixer": "^9.5.1",
     "cssnano": "^4.1.10",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0"
   }
 }
