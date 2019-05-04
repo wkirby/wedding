@@ -1,19 +1,21 @@
-- time: 1:00pm
-  label: Guests arrive at Gilsland Farm
+- time: 1:30pm
+  label: Doors open at Gilsland Farm
   description: Parking is limited. If you can, carpool!
 - time: 2:00pm
   label: Ceremony Starts
-- time: 2:30pm
-  label: Refreshments Served
 - time: 2:45pm
+  label: Refreshments Served
+- time: 3:00pm
   label: Wedding Party Photographs at Gilsland Farm
 - time: 4:00pm
-  label: Guests arrive at The Frontier
-- time: 5:00pm
+  label: Doors open at The Frontier
+- time: 5:30pm
   label: Dinner Served
-- time: 6:15pm
-  label: Toasts & Speeches
 - time: 6:30pm
-  label: Dance etc.
+  label: Toasts & Speeches
+- time: 7:00pm
+  label: First Dance
+- time: 8:00pm
+  label: Dessert & Coffee Served
 - time: 10:00pm
   label: Reception Ends
