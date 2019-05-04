@@ -1,21 +1,27 @@
-import React from "react";
 import Head from "next/head";
-import { Footer } from "../components/Footer";
-
+import React from "react";
+import siteData from "../data/site.yaml";
 import "../assets/styles/main.scss";
+import { Footer } from "../components/Footer";
 import { Nav } from "./Nav";
 
-export const Layout = ({ pageTitle, children, ...props }) => {
-  const title = pageTitle ? `${pageTitle} | Wyatt & Jessica` : 'Wyatt & Jessica'
+const Favicon = ({ href }) => (
+  <>
+    <link rel="shortcut icon" href={href} type="image/x-icon" />
+    <link rel="icon" href={href} type="image/x-icon" />
+  </>
+);
+
+export const Layout = ({ heroImage, pageTitle, children, ...props }) => {
+  const image = heroImage ? heroImage : siteData.og_image;
+  const title = pageTitle
+    ? `${pageTitle} | ${siteData.page_title}`
+    : siteData.page_title;
+
   return (
     <main id="main" {...props}>
       <Head>
-        <link
-          rel="shortcut icon"
-          href="/static/img/favicon.ico"
-          type="image/x-icon"
-        />
-        <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" />
+        <Favicon href="/static/img/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         <link
@@ -25,10 +31,15 @@ export const Layout = ({ pageTitle, children, ...props }) => {
           crossOrigin="anonymous"
         />
 
+
         <title>{title}</title>
+        <meta name="description" content={siteData.description} />
+
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:image" content="/static/img/hero.jpg" />
-        <meta name="description" content="Wyatt and Jessica are getting married. August 3, 2019."/>
+        <meta property="og:image" content={`${siteData.root_url}${image}`} />
+        <meta property="og:url" content={siteData.root_url} />
+        <meta property="og:description" content={siteData.description} />
       </Head>
 
       <Nav />
