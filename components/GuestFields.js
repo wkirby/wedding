@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React from "react";
-import { FormGroup, FormText, Label, Input } from "reactstrap";
+import { FormGroup, FormText, Label, Input, CustomInput } from "reactstrap";
 
 export const GuestFields = ({ index, ...props }) => {
   const guest = props.values.guests[index];
@@ -21,7 +21,7 @@ export const GuestFields = ({ index, ...props }) => {
 
       <FormGroup>
         <Label>Will you be attending?</Label>
-        <Input
+        <CustomInput
           type="select"
           name={`guests[${index}].attending`}
           onChange={props.handleChange}
@@ -31,7 +31,7 @@ export const GuestFields = ({ index, ...props }) => {
           <option value="">Select...</option>
           <option>Will Attend</option>
           <option>Will not Attend</option>
-        </Input>
+        </CustomInput>
         {errors.attending && (
           <FormText color="danger">{errors.attending}</FormText>
         )}
@@ -39,7 +39,7 @@ export const GuestFields = ({ index, ...props }) => {
 
       <FormGroup>
         <Label>Meal Selection</Label>
-        <Input
+        <CustomInput
           type="select"
           name={`guests[${index}].mealOption`}
           onChange={props.handleChange}
@@ -50,7 +50,7 @@ export const GuestFields = ({ index, ...props }) => {
           <option>Rigatoni Bolognese</option>
           <option>Pesto Chicken</option>
           <option>Butternut Squash Ravioli (vegetarian)</option>
-        </Input>
+        </CustomInput>
         {errors.mealOption && (
           <FormText color="danger">{errors.mealOption}</FormText>
         )}
