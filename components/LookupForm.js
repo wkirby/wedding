@@ -56,9 +56,9 @@ export class LookupForm extends React.Component {
           render={props => (
             <Form onSubmit={props.handleSubmit}>
               <FormGroup>
-                <Label>Your Name</Label>
+                <Label>Your Full Name</Label>
                 <Input
-                  placeholder="Enter your name as it appears on your invitation"
+                  placeholder="John Doe"
                   onChange={props.handleChange}
                   onBlur={props.handleBlur}
                   value={props.values.name}
@@ -68,6 +68,8 @@ export class LookupForm extends React.Component {
                 {props.errors.name && (
                   <FormText color="danger">{props.errors.name}</FormText>
                 )}
+
+                <FormText color="muted">Please enter your full name as it appears on your paper invitation.</FormText>
               </FormGroup>
 
               <Button

@@ -47,13 +47,14 @@ export const GuestFields = ({ index, ...props }) => {
           value={guest.mealOption}
         >
           <option value="">Select a Meal...</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
+          <option>Rigatoni Bolognese</option>
+          <option>Pesto Chicken</option>
+          <option>Butternut Squash Ravioli (vegetarian)</option>
         </Input>
         {errors.mealOption && (
           <FormText color="danger">{errors.mealOption}</FormText>
         )}
+        <FormText color="muted">Details can be found on your paper invitation.</FormText>
       </FormGroup>
       <FormGroup>
         <Label>Email</Label>
