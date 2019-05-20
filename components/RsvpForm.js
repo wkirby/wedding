@@ -14,7 +14,7 @@ import * as yup from "yup";
 import { GuestFields } from "./GuestFields";
 import { SubmitButton } from "./SubmitButton";
 
-const RSVP_URL = "http://localhost:3214/rsvp";
+const RSVP_URL = process.env.RSVP_URL;
 
 const GUEST_SCHEMA = yup.object().shape({
   name: yup.string().required("Please provide a name."),

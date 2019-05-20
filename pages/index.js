@@ -8,6 +8,7 @@ import { TimelineEntry } from "../components/TimelineEntry";
 import { Subtitle, Title } from "../components/Title";
 import photoData from "../data/photos.yaml";
 import timeline from "../data/timeline.yaml";
+import Link from "next/link";
 
 export default () => {
   const timelineEntries = timeline.map((t, i) => (
@@ -32,7 +33,16 @@ export default () => {
         </div>
       </header>
 
+      <Section>
+        <div className="container is-narroow text-center">
+          <p className="lead">Need to RSVP?</p>
+          <Link href={"/rsvp"}>
+            <a className="btn btn-primary">RSVP Online</a>
+          </Link>
+        </div>
+      </Section>
       <hr />
+
       <Section>
         <div className="container is-narrow text-center">
           <SectionHeader title="Ten Years Together" />

@@ -9,7 +9,7 @@ const LOOKUP_SCHEMA = yup.object().shape({
   name: yup.string().required("Please provide a name.")
 });
 
-const LOOKUP_URL = "http://localhost:3214/lookup";
+const LOOKUP_URL = process.env.LOOKUP_URL;
 
 export class LookupForm extends React.Component {
   state = { error: null };
