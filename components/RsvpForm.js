@@ -1,9 +1,18 @@
-import { Formik, Field } from "formik";
 import axios from "axios";
-import * as yup from "yup";
+import { Field, Formik } from "formik";
 import React from "react";
-import { Alert, Button, Form, Card, CardBody, CardTitle } from "reactstrap";
+import {
+  Alert,
+  Button,
+  Card,
+  CardBody,
+  CardTitle,
+  Form,
+  Spinner
+} from "reactstrap";
+import * as yup from "yup";
 import { GuestFields } from "./GuestFields";
+import { SubmitButton } from "./SubmitButton";
 
 const RSVP_URL = "http://localhost:3214/rsvp";
 
@@ -84,6 +93,8 @@ export class RsvpForm extends React.Component {
       <>
         {error && <Alert color="warning">{error}</Alert>}
         <Formik
+          validateOnBlur={false}
+          falidateOnChange={false}
           initialValues={{ invitedGuest: guestName, guests }}
           validationSchema={GUESTS_SCHEMA}
           onSubmit={this.onSubmit}
@@ -103,16 +114,22 @@ export class RsvpForm extends React.Component {
                   <Card key={index} className="mb-3">
                     <CardBody>
                       {props.values.guests.length > 1 && (
-                        <CardTitle><h5>Guest {index + 1}</h5></CardTitle>
+                        <CardTitle>
+                          <h5>Guest {index + 1}</h5>
+                        </CardTitle>
                       )}
                       <GuestFields guest={guest} index={index} {...props} />
                     </CardBody>
                   </Card>
                 ))}
 
-              <Button color="primary" type="submit">
-                {props.isSubmitting ? "Sending..." : "RSVP"}
-              </Button>
+              <SubmitButton
+                block={!props.isSubmitting}
+                submitting={props.isSubmitting}
+                label="Send RSVP"
+                submittingLabel="Sending..."
+                type="submit"
+              />
             </Form>
           )}
         />

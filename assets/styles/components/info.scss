@@ -1,0 +1,28 @@
+.info {
+    background: mix($info, $body-bg, 1%);
+    outline: 1px solid $gray-200;
+    border-left: 3px solid $info;
+    padding: $spacer-3;
+    color: $text-muted;
+
+    display: flex;
+    flex-direction: row;
+
+    .info-icon {
+        margin-right: $spacer-3;
+    }
+
+    .info-icon,
+    a {
+        color: $info;
+    }
+
+    &.info-success {
+        border-left-color: $success;
+
+        .info-icon,
+        a {
+            color: $success;
+        }
+    }
+}

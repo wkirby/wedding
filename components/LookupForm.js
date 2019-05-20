@@ -1,19 +1,12 @@
 import axios from "axios";
 import { Formik } from "formik";
 import React from "react";
-import {
-  Alert,
-  Button,
-  Form,
-  FormGroup,
-  FormText,
-  Input,
-  Label
-} from "reactstrap";
+import { Alert, Form, FormGroup, FormText, Input, Label } from "reactstrap";
 import * as yup from "yup";
+import { SubmitButton } from "./SubmitButton";
 
 const LOOKUP_SCHEMA = yup.object().shape({
-  name: yup.string().required()
+  name: yup.string().required("Please provide a name.")
 });
 
 const LOOKUP_URL = "http://localhost:3214/lookup";
@@ -50,6 +43,8 @@ export class LookupForm extends React.Component {
       <>
         {error && <Alert color="warning">{error}</Alert>}
         <Formik
+          validateOnBlur={false}
+          falidateOnChange={false}
           initialValues={{ name: "" }}
           validationSchema={LOOKUP_SCHEMA}
           onSubmit={this.onSubmit}
@@ -63,22 +58,26 @@ export class LookupForm extends React.Component {
                   onBlur={props.handleBlur}
                   value={props.values.name}
                   name="name"
+                  autoFocus
                 />
 
                 {props.errors.name && (
                   <FormText color="danger">{props.errors.name}</FormText>
                 )}
 
-                <FormText color="muted">Please enter your full name as it appears on your paper invitation.</FormText>
+                <FormText color="muted">
+                  Please enter your full name as it appears on your paper
+                  invitation.
+                </FormText>
               </FormGroup>
 
-              <Button
-                disabled={props.isSubmitting}
-                color="primary"
+              <SubmitButton
+                block={!props.isSubmitting}
+                submitting={props.isSubmitting}
+                label="Look Up"
+                submittingLabel="Searching..."
                 type="submit"
-              >
-                {props.isSubmitting ? "Searching..." : "Look Up"}
-              </Button>
+              />
             </Form>
           )}
         />

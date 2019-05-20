@@ -4,6 +4,7 @@ import siteData from "../data/site.yaml";
 import "../assets/styles/main.scss";
 import { Footer } from "../components/Footer";
 import { Nav } from "./Nav";
+import { Icon } from "./Icon";
 
 const Favicon = ({ href }) => (
   <>
@@ -47,7 +48,7 @@ export const Layout = ({ heroImage, pageTitle, children, ...props }) => {
 
       <Footer className="text-center text-muted">
         <small>
-          Made with ❤ in Seattle by{" "}
+          Made with <Icon className="typcn typcn-heart" /> in Seattle by{" "}
           <a href="https://www.apsis.io/" target="_blank">
             Apsis Labs
           </a>

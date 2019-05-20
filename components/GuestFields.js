@@ -21,7 +21,9 @@ export const GuestFields = ({ index, ...props }) => {
 
       <FormGroup>
         <Label>Will you be attending?</Label>
+
         <CustomInput
+          id="attend"
           type="select"
           name={`guests[${index}].attending`}
           onChange={props.handleChange}
@@ -32,6 +34,7 @@ export const GuestFields = ({ index, ...props }) => {
           <option>Will Attend</option>
           <option>Will not Attend</option>
         </CustomInput>
+
         {errors.attending && (
           <FormText color="danger">{errors.attending}</FormText>
         )}
@@ -40,13 +43,14 @@ export const GuestFields = ({ index, ...props }) => {
       <FormGroup>
         <Label>Meal Selection</Label>
         <CustomInput
+          id="meal"
           type="select"
           name={`guests[${index}].mealOption`}
           onChange={props.handleChange}
           onBlur={props.handleBlur}
           value={guest.mealOption}
         >
-          <option value="">Select a Meal...</option>
+          <option value="">Select...</option>
           <option>Rigatoni Bolognese</option>
           <option>Pesto Chicken</option>
           <option>Butternut Squash Ravioli (vegetarian)</option>
@@ -56,6 +60,7 @@ export const GuestFields = ({ index, ...props }) => {
         )}
         <FormText color="muted">Details can be found on your paper invitation.</FormText>
       </FormGroup>
+
       <FormGroup>
         <Label>Email</Label>
         <Input
@@ -67,6 +72,7 @@ export const GuestFields = ({ index, ...props }) => {
         />
         {errors.email && <FormText color="danger">{errors.email}</FormText>}
       </FormGroup>
+
       <FormGroup>
         <Label>Phone</Label>
         <Input
