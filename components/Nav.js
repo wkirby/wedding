@@ -49,7 +49,7 @@ export class Nav extends React.Component {
 
         <Collapse isOpen={!this.state.collapsed} navbar>
           <BSNav navbar>
-            <NavItem className="d-inline-block d-md-none">
+            <NavItem>
               <ActiveLink href="/">
                 <NavLink>Home</NavLink>
               </ActiveLink>
@@ -79,6 +79,11 @@ export class Nav extends React.Component {
             <NavItem>
               <ActiveLink href="/registry">
                 <NavLink>Registry</NavLink>
+              </ActiveLink>
+            </NavItem>
+            <NavItem>
+              <ActiveLink href="/rsvp">
+                <NavLink>RSVP</NavLink>
               </ActiveLink>
             </NavItem>
           </BSNav>
