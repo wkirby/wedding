@@ -954,7 +954,6 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
-        className: "d-inline-block d-md-none",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 52
@@ -1069,7 +1068,26 @@ function (_React$Component) {
           lineNumber: 81
         },
         __self: this
-      }, "Registry"))))));
+      }, "Registry"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_ActiveLink__WEBPACK_IMPORTED_MODULE_9__["default"], {
+        href: "/rsvp",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavLink"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      }, "RSVP"))))));
     }
   }]);
 
@@ -69230,7 +69248,7 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 3:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Frsvp&absolutePagePath=%2FUsers%2Fwyattkirby%2FDev%2Fpersonal%2Fwedding%2Fpages%2Frsvp.js ***!
   \***************************************************************************************************************************************/
@@ -69253,5 +69271,5 @@ module.exports = dll_1aef2d0bbc0d334d831c;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=rsvp.js.map
