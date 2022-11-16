@@ -27,7 +27,7 @@
     "js-yaml-loader": "^1.0.1",
     "lodash": "^4.17.11",
     "modularscale-sass": "^3.0.8",
-    "next": "^8.1.0",
+    "next": "^13.0.3",
     "next-page-transitions": "^1.0.0-beta.2",
     "react": "^16.8.6",
     "react-animated-burgers": "^1.2.6",
